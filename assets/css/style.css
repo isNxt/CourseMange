@@ -1,0 +1,15 @@
+html,body{
+    font-family: Helvetica, Tahoma, Arial, STXihei, "Segoe UI", "Microsoft YaHei", "微软雅黑", "华文细黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+}
+.form-label {
+    display: block;
+    margin-bottom: .375rem;
+    font-weight: 400;
+    font-size: 0.9375rem;
+}
+.btn {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    min-width: 2.375rem;
+}

@@ -15,7 +15,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <!-- Generated: 2018-04-16 09:29:05 +0200 -->
-    <title>Page 404</title>
+    <title>Login</title>
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Require.js -->
     <script src="../../assets/js/require.min.js"></script>
@@ -36,14 +36,43 @@
   </head>
   <body class="">
     <div class="page">
-      <div class="page-content">
-        <div class="container text-center">
-          <div class="display-1 text-muted mb-5"><i class="si si-exclamation"></i> 404</div>
-          <h1 class="h2 mb-3">Oops.. You just found an error page..</h1>
-          <p class="h4 text-muted font-weight-normal mb-7">We are sorry but our service is currently not available&hellip;</p>
-          <a class="btn btn-primary" href="javascript:history.back()">
-            <i class="fe fe-arrow-left mr-2"></i>Go back
-          </a>
+      <div class="page-single">
+        <div class="container">
+          <div class="row">
+            <div class="col col-login mx-auto">
+              <div class="text-center mb-6">
+                <img src="../../assets/images/brand.svg" class="h-9" alt="">
+              </div>
+              <form class="card" action="" method="post">
+                <div class="card-body p-6">
+                  <div class="card-title">Login to your account</div>
+                  <div class="form-group">
+                    <label class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">
+                      Password
+                      <a href="forgot-password.html" class="float-right small">I forgot password</a>
+                    </label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" />
+                      <span class="custom-control-label">Remember me</span>
+                    </label>
+                  </div>
+                  <div class="form-footer">
+                    <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                  </div>
+                </div>
+              </form>
+              <div class="text-center text-muted">
+                Don't have account yet? <a href="register.html">Sign up</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

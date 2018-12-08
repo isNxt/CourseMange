@@ -15,7 +15,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <!-- Generated: 2018-04-16 09:29:05 +0200 -->
-    <title>Login</title>
+    <title>Register</title>
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Require.js -->
     <script src="../../assets/js/require.min.js"></script>
@@ -40,39 +40,39 @@
         <div class="container">
           <div class="row">
             <div class="col col-login mx-auto">
-              <div class="text-center mb-6">
-                <img src="../../assets/images/brand.svg" class="h-9" alt="">
-              </div>
               <form class="card" action="" method="post">
                 <div class="card-body p-6">
-                  <div class="card-title">登录您的账户</div>
+                  <div class="card-title">激活账户</div>
                   <div class="form-group">
-                    <label class="form-label">学号/职工号</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                           placeholder="2432016220xxxx">
+                    <label class="form-label">设置密码</label>
+                    <input type="email" class="form-control" placeholder="不少于6位">
                   </div>
                   <div class="form-group">
-                    <label class="form-label">账户密码<a href="forgot-identity.html" class="float-right small">忘记了密码?</a>
-                    </label>
-                    <div class="input-icon mb-3">
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="初始密码为123456">
-                    <span class="input-icon-addon"><i class="fe fe-eye-off"></i></span>
+                    <label class="form-label">确认密码</label>
+                    <input type="password" class="form-control" placeholder="重新输入密码">
+                  </div>
+                  <!--<p class="text-muted">Enter your email address and your password will be reset and emailed to you
+                  .</p>-->
+                  <div class="form-group">
+                    <label class="form-label">验证邮箱</label>
+                    <input type="text" class="form-control" placeholder="可用的邮箱地址">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">验证身份</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="发送验证码至邮箱">
+                      <span class="input-group-append">
+                              <button class="btn btn-primary" type="button">获取验证码</button>
+                            </span>
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" />
-                      <span class="custom-control-label">记住我的密码</span>
-                    </label>
-                  </div>
                   <div class="form-footer">
-                    <button type="submit" class="btn btn-primary btn-block" id="btn-login-submit">登录
-                    </button>
+                    <button type="submit" class="btn btn-primary btn-block" id="btn-active-submit">激活</button>
                   </div>
                 </div>
               </form>
               <div class="text-center text-muted">
-                <a href="404.html">@ </a>Copyright
+                已有账户? <a href="login.html">返回登录界面</a>
               </div>
             </div>
           </div>
