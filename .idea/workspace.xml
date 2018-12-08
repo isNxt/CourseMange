@@ -19,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/common/400.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            <state relative-caret-position="570">
+              <caret line="36" column="69" lean-forward="true" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -31,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/common/carousel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2085">
-              <caret line="96" column="24" lean-forward="true" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
+            <state relative-caret-position="1440">
+              <caret line="96" column="24" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#a#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -51,16 +51,34 @@
         <entry file="file://$PROJECT_DIR$/templates/common/crypto-currencies.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="303">
-              <caret line="1451" column="63" lean-forward="true" selection-start-line="1451" selection-start-column="63" selection-end-line="1451" selection-end-column="63" />
+              <caret line="1451" column="63" selection-start-line="1451" selection-start-column="63" selection-end-line="1451" selection-end-column="63" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/common/email.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="24" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/common/icons.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="558">
-              <caret line="1422" column="57" lean-forward="true" selection-start-line="1422" selection-start-column="57" selection-end-line="1422" selection-end-column="57" />
+              <caret line="1422" column="57" selection-start-line="1422" selection-start-column="57" selection-end-line="1422" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/common/blog.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -73,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/common/invoice.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-837">
+            <state relative-caret-position="450">
               <caret line="30" column="78" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
             </state>
           </provider>
@@ -82,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/common/404.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="28" column="56" lean-forward="true" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+            <state relative-caret-position="420">
+              <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -125,6 +143,7 @@
       <find>&quot;assets/</find>
       <find>&quot;./docs/</find>
       <find>&lt;li class=&quot;list-inline-item&quot;&gt;&lt;a href=&quot;./faq.html&quot;&gt;FAQ&lt;/a&gt;&lt;/li&gt;</find>
+      <find>tabler.github.io - a responsive, flat and full featured admin template</find>
     </findStrings>
     <replaceStrings>
       <replace>../../static/img/favicon.ico</replace>
@@ -139,7 +158,6 @@
       <replace>../../static/images/Classroom.svg</replace>
       <replace>&lt;link href=&quot;https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css&quot; rel=&quot;stylesheet&quot;&gt;</replace>
       <replace>&lt;link rel=&quot;stylesheet&quot; href=&quot;../../static/css/common/style.css&quot;&gt;</replace>
-      <replace>&lt;link rel=&quot;stylesheet&quot; href=&quot;../../static/css/common/style.css&quot;&gt;</replace>
       <replace />
       <replace>../../static</replace>
       <replace>../../demo</replace>
@@ -148,6 +166,7 @@
       <replace>&quot;../../static/</replace>
       <replace>&quot;../../docs/</replace>
       <replace>&lt;li class=&quot;list-inline-item&quot;&gt;&lt;a href=&quot;./404.html&quot;&gt;FAQ&lt;/a&gt;&lt;/li&gt;</replace>
+      <replace>tabler</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\Github\CourseMange\examples\bootstrap</dir>
@@ -180,11 +199,13 @@
         <option value="$PROJECT_DIR$/templates/common/register-next.html" />
         <option value="$PROJECT_DIR$/templates/common/login.html" />
         <option value="$PROJECT_DIR$/examples/tabler/login.html" />
-        <option value="$PROJECT_DIR$/templates/common/400.html" />
         <option value="$PROJECT_DIR$/templates/common/carousel.html" />
         <option value="$PROJECT_DIR$/templates/common/404.html" />
         <option value="$PROJECT_DIR$/templates/common/crypto-currencies.html" />
         <option value="$PROJECT_DIR$/templates/common/icons.html" />
+        <option value="$PROJECT_DIR$/templates/common/blog.html" />
+        <option value="$PROJECT_DIR$/templates/common/email.html" />
+        <option value="$PROJECT_DIR$/templates/common/400.html" />
       </list>
     </option>
   </component>
@@ -227,19 +248,41 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope '项目文件'; set:项目文件; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
               <item name="CourseMange" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="CourseMange" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="CourseMange" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="CourseMange" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="CourseMange" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="CourseMange" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="CourseMange" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="CourseMange" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="templates" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="CourseMange" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="CourseMange" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="templates" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="common" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,14 +349,16 @@
       <workItem from="1544166656017" duration="11877000" />
       <workItem from="1544242578967" duration="795000" />
       <workItem from="1544245612027" duration="8904000" />
+      <workItem from="1544255684498" duration="520000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28358000" />
+    <option name="totallyTimeSpent" value="28878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="设计器" order="0" />
       <window_info id="Favorites" order="1" show_stripe_button="false" side_tool="true" />
@@ -344,220 +389,41 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/examples/floating-labels/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/dashboard/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="48" lean-forward="true" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/checkout/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="24" column="101" lean-forward="true" selection-start-line="24" selection-start-column="101" selection-end-line="24" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/navbar-fixed/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/carousel/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/navbar-bottom/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/offcanvas/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/blog/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="93" lean-forward="true" selection-start-line="15" selection-start-column="93" selection-end-line="15" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/product/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="31" column="66" lean-forward="true" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/album/album.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" selection-start-line="29" selection-end-line="36" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/album/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="989">
-          <caret line="70" column="38" lean-forward="true" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/sign-in/signin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="1" lean-forward="true" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/vendor/js.cookie-2.2.0.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="2" column="1681" selection-start-line="2" selection-start-column="1681" selection-end-line="2" selection-end-column="1681" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/Classroom.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/Classroom.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/teacher.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/admin.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/student.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/sign-in/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/tabler/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/tabler/pricing-cards.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/tabler/maps.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/tabler/gallery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="31" column="64" lean-forward="true" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/common/sign-in.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tabler/empty.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/demo/brand/tabler.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/bootstrap/sign-in/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tabler/400.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tabler/503.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tabler/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="104" column="56" lean-forward="true" selection-start-line="104" selection-start-column="56" selection-end-line="104" selection-end-column="56" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tabler/carousel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3480">
-          <caret line="31" column="68" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tabler/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="45" column="71" selection-start-line="45" selection-start-column="71" selection-end-line="45" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/vendor/tabler.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/common/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/vendor/dashboard.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="447" column="16" lean-forward="true" selection-start-line="447" selection-start-column="16" selection-end-line="447" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/checkout/index.html" />
+    <entry file="file://$PROJECT_DIR$/examples/navbar-fixed/index.html" />
+    <entry file="file://$PROJECT_DIR$/examples/carousel/index.html" />
+    <entry file="file://$PROJECT_DIR$/examples/navbar-bottom/index.html" />
+    <entry file="file://$PROJECT_DIR$/examples/offcanvas/index.html" />
+    <entry file="file://$PROJECT_DIR$/examples/blog/index.html" />
+    <entry file="file://$PROJECT_DIR$/examples/product/index.html" />
+    <entry file="file://$PROJECT_DIR$/examples/album/album.css" />
+    <entry file="file://$PROJECT_DIR$/examples/album/index.html" />
+    <entry file="file://$PROJECT_DIR$/examples/sign-in/signin.css" />
+    <entry file="file://$PROJECT_DIR$/static/js/vendor/js.cookie-2.2.0.min.js" />
+    <entry file="file://$PROJECT_DIR$/static/img/Classroom.svg" />
+    <entry file="file://$PROJECT_DIR$/static/img/Classroom.png" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd.iml" />
+    <entry file="file://$PROJECT_DIR$/static/js/teacher.js" />
+    <entry file="file://$PROJECT_DIR$/static/js/admin.js" />
+    <entry file="file://$PROJECT_DIR$/static/js/student.js" />
+    <entry file="file://$PROJECT_DIR$/examples/sign-in/index.html" />
+    <entry file="file://$PROJECT_DIR$/examples/tabler/index.html" />
+    <entry file="file://$PROJECT_DIR$/examples/tabler/pricing-cards.html" />
+    <entry file="file://$PROJECT_DIR$/examples/tabler/maps.html" />
+    <entry file="file://$PROJECT_DIR$/examples/tabler/gallery.html" />
+    <entry file="file://$PROJECT_DIR$/templates/common/sign-in.html" />
+    <entry file="file://$PROJECT_DIR$/templates/login.html" />
+    <entry file="file://$PROJECT_DIR$/templates/tabler/empty.html" />
+    <entry file="file://$PROJECT_DIR$/static/images/demo/brand/tabler.svg" />
+    <entry file="file://$PROJECT_DIR$/examples/bootstrap/sign-in/index.html" />
+    <entry file="file://$PROJECT_DIR$/templates/tabler/400.html" />
+    <entry file="file://$PROJECT_DIR$/templates/tabler/503.html" />
+    <entry file="file://$PROJECT_DIR$/templates/tabler/index.html" />
+    <entry file="file://$PROJECT_DIR$/templates/tabler/carousel.html" />
+    <entry file="file://$PROJECT_DIR$/templates/tabler/login.html" />
+    <entry file="file://$PROJECT_DIR$/static/css/vendor/tabler.css" />
+    <entry file="file://$PROJECT_DIR$/static/css/common/style.css" />
+    <entry file="file://$PROJECT_DIR$/static/css/vendor/dashboard.css" />
     <entry file="file://$PROJECT_DIR$/templates/common/forgot-password.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
@@ -572,45 +438,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tabler/form-elements.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="28" column="52" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/tabler/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="43" column="47" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/common/register-submit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/common/register-next.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="63" column="59" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/common/400.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tabler/form-elements.html" />
+    <entry file="file://$PROJECT_DIR$/examples/tabler/login.html" />
+    <entry file="file://$PROJECT_DIR$/templates/common/register-submit.html" />
+    <entry file="file://$PROJECT_DIR$/templates/common/register-next.html" />
     <entry file="file://$PROJECT_DIR$/templates/common/carousel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2085">
-          <caret line="96" column="24" lean-forward="true" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
+        <state relative-caret-position="1440">
+          <caret line="96" column="24" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#a#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -627,29 +462,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/common/invoice.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-837">
+        <state relative-caret-position="450">
           <caret line="30" column="78" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/common/404.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="28" column="56" lean-forward="true" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+        <state relative-caret-position="420">
+          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/common/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/common/crypto-currencies.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
-          <caret line="1451" column="63" lean-forward="true" selection-start-line="1451" selection-start-column="63" selection-end-line="1451" selection-end-column="63" />
+          <caret line="1451" column="63" selection-start-line="1451" selection-start-column="63" selection-end-line="1451" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/common/email.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="24" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/common/icons.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
-          <caret line="1422" column="57" lean-forward="true" selection-start-line="1422" selection-start-column="57" selection-end-line="1422" selection-end-column="57" />
+          <caret line="1422" column="57" selection-start-line="1422" selection-start-column="57" selection-end-line="1422" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/common/400.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="36" column="69" lean-forward="true" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
         </state>
       </provider>
     </entry>
