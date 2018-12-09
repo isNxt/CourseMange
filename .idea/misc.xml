@@ -3,23 +3,6 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="localRepository" value="D:\AppData\Local\Maven\repository" />
-        <option name="mavenHome" value="D:/Program Files/Maven" />
-        <option name="userSettingsFile" value="D:\Program Files\Maven\conf\settings.xml" />
-      </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="MavenRunner">
-    <option name="jreName" value="1.8" />
-  </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -55,8 +38,5 @@
       <option name="name" value="1a1a5272-659d-4c45-81b5-f178a36216f4" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
-  </component>
-  <component name="SpringGeneralSettings">
-    <option name="allowAutoConfigurationMode" value="true" />
   </component>
 </project>
