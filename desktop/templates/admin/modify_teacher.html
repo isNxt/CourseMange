@@ -116,9 +116,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <form  action="./admin-student.html" method="post" onsubmit="return createStudent();" class="card">
+                        <form  action="./admin-student.html" method="post" onsubmit="return modifyStudent();" class="card">
                             <div class="card-header">
-                                <h3 class="card-title">创建学生用户</h3>
+                                <h3 class="card-title">修改教师用户</h3>
                             </div>
                             <div class="card-body">
                                 <div class="row">
@@ -129,7 +129,7 @@
                                                 <input type="text" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label class="form-label">输入学号<span class="form-required">*</span></label>
+                                                <label class="form-label">输入教工号<span class="form-required">*</span></label>
                                                 <input type="text" class="form-control">
                                             </div>
                                             <div class="form-group">
@@ -137,7 +137,7 @@
                                                 <input type="email" class="form-control">
                                             </div>
                                             <div class="form-group mb-0">
-                                                <label class="form-label">设置初始密码</label>
+                                                <label class="form-label">初始密码</label>
                                                 <input type="tel" class="form-control">
                                             </div>
                                         </fieldset>
@@ -156,10 +156,29 @@
             </div>
         </div>
     </div>
-
-
-
 </div>
-</div>
+
+<script>
+    var url=location.search,obj={};
+
+    if(url.indexOf("?")!=-1){
+
+        var str = url.substr(1)
+
+        strs= varstr.split("&");
+
+        for(var i=0;i<strs.length;i++){
+
+            obj[strs[i].split("=")[0]]=unescape(strs[ i].split("=")[1]);
+
+        }
+
+    }
+
+    alert(obj.name)
+
+
+
+</script>
 </body>
 </html>
