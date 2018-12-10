@@ -1,79 +1,80 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html dir="ltr" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta http-equiv="Content-Language" content="en" />
-  <meta name="msapplication-TileColor" content="#2d89ef">
-  <meta name="theme-color" content="#4188c9">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
-  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
-  <!-- Generated: 2018-04-16 09:29:05 +0200 -->
-  <title>Login</title>
-  <!-- Font -->
-  <link rel="stylesheet" href="../../assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="../../assets/css/fonts.css">
-  <!-- Require.js -->
-  <script src="../../assets/js/require.min.js"></script>
-  <!-- Dashboard Core -->
-  <link href="../../assets/css/dashboard.css" rel="stylesheet" />
-  <script src="../../assets/js/dashboard.js"></script>
-  <!-- c3.js Charts Plugin -->
-  <link href="../../assets/plugins/charts-c3/plugin.css" rel="stylesheet" />
-  <script src="../../assets/plugins/charts-c3/plugin.js"></script>
-  <!-- Google Maps Plugin -->
-  <link href="../../assets/plugins/maps-google/plugin.css" rel="stylesheet" />
-  <script src="../../assets/plugins/maps-google/plugin.js"></script>
-  <!-- Input Mask Plugin -->
-  <script src="../../assets/plugins/input-mask/plugin.js"></script>
-  <!-- Customize -->
-  <link href="../../assets/css/style.css" rel="stylesheet" />
-  <script src="../../assets/js/common.js"></script>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <meta content="en" http-equiv="Content-Language"/>
+    <meta content="#2d89ef" name="msapplication-TileColor">
+    <meta content="#4188c9" name="theme-color">
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="True" name="HandheldFriendly">
+    <meta content="320" name="MobileOptimized">
+    <link href="../favicon.ico" rel="icon" type="image/x-icon"/>
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <!-- Generated: 2018-04-16 09:29:05 +0200 -->
+    <title>Login</title>
+    <!-- Font -->
+    <link href="../../assets/css/fontawesome.min.css" rel="stylesheet">
+    <!-- Require.js -->
+    <script src="../../assets/js/require.min.js"></script>
+    <!-- Dashboard Core -->
+    <link href="../../assets/css/dashboard.css" rel="stylesheet"/>
+    <script src="../../assets/js/dashboard.js"></script>
+    <!-- c3.js Charts Plugin -->
+    <link href="../../assets/plugins/charts-c3/plugin.css" rel="stylesheet"/>
+    <script src="../../assets/plugins/charts-c3/plugin.js"></script>
+    <!-- Google Maps Plugin -->
+    <link href="../../assets/plugins/maps-google/plugin.css" rel="stylesheet"/>
+    <script src="../../assets/plugins/maps-google/plugin.js"></script>
+    <!-- Input Mask Plugin -->
+    <script src="../../assets/plugins/input-mask/plugin.js"></script>
+    <!-- Customize -->
+    <link href="../../assets/css/style.css" rel="stylesheet"/>
+    <script src="../../assets/js/common.js"></script>
 </head>
-  <body class="">
-    <div class="page">
-      <div class="page-single">
+<body class="">
+<div class="page">
+    <div class="page-single">
         <div class="container">
-          <div class="row">
-            <div class="col col-login mx-auto">
-              <div class="text-center mb-6">
-                <img src="../../assets/images/brand.svg" class="h-9" alt="">
-              </div>
-              <form class="card" action="forgot-reset.html" method="post" onsubmit="return getVerCode();">
-                <div class="card-body p-6">
-                  <div class="card-title">忘记密码</div>
-                  <p class="text-muted">输入账户信息,验证码会通过绑定的邮箱发送给用户</p>
-                  <div class="form-group">
-                    <label class="form-label" for="exampleInputEmail1">学号/教工号</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                           placeholder="24320162202xxx">
-                  </div>
-                  <div class="form-group">
-                    <label class="form-label">验证身份</label>
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="发送验证码至邮箱">
-                      <span class="input-group-append">
-                              <button class="btn btn-primary" type="button">获取验证码</button>
-                            </span>
+            <div class="row">
+                <div class="col col-login mx-auto">
+                    <div class="text-center mb-6">
+                        <img alt="" class="h-9" src="../../assets/images/brand.png">
                     </div>
-                  </div>
-                  <div class="form-footer">
-                    <button type="submit" class="btn btn-primary btn-block">进入下一步</button>
-                  </div>
+                    <form action="forgot-reset.html" class="card" method="post" onsubmit="return getVerCode();">
+                        <div class="card-body p-6">
+                            <div class="card-title">忘记密码</div>
+                            <p class="text-muted">输入账户信息,验证码会通过绑定的邮箱发送给用户</p>
+                            <div class="form-group">
+                                <label class="form-label" for="exampleInputEmail1">学号/教工号</label>
+                                <input aria-describedby="emailHelp" class="form-control" id="exampleInputEmail1"
+                                       placeholder="24320162202xxx"
+                                       type="email">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">验证身份</label>
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="发送验证码至邮箱" type="text">
+                                    <span class="input-group-append">
+                              <button class="btn btn-secondary" type="button">获取验证码</button>
+                            </span>
+                                </div>
+                            </div>
+                            <div class="form-footer">
+                                <button class="btn btn-primary btn-block" type="submit">进入下一步</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="text-center text-muted">想起密码, <a href="login.html">返回</a> 登录界面
+                    </div>
                 </div>
-              </form>
-              <div class="text-center text-muted">想起密码, <a href="login.html">返回</a> 登录界面
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </body>
+</div>
+</body>
 </html>
