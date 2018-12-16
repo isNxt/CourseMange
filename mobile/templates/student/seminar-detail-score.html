@@ -21,7 +21,7 @@
     <link href="../favicon.ico" rel="icon" type="image/x-icon" />
     <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <!-- Generated: 2018-04-16 09:29:05 +0200 -->
-    <title>我的主页</title>
+    <title>讨论课成绩</title>
     <!-- Font -->
     <link href="../../assets/css/fontawesome.min.css" rel="stylesheet" />
 
@@ -53,12 +53,15 @@
         <div class="header py-4">
           <div class="container">
             <div class="d-flex">
-              <a class="header-brand ml-1" href="./home.html">
+              <a class="header-brand ml-1 d-none d-lg-flex" href="./home.html">
                 <img
                   alt="logo"
                   class="header-brand-img"
                   src="../../assets/images/brand.png"
                 />
+              </a>
+              <a class="nav-link icon d-lg-none" href="./home.html">
+                <i class="fe fe-arrow-left-circle"></i>
               </a>
               <div class="d-flex order-lg-2 ml-auto">
                 <div class="dropdown d-none d-md-flex">
@@ -132,7 +135,7 @@
                     <a class="dropdown-item" href="account-setting.html">
                       <i class="dropdown-icon fe fe-settings"></i> 个人设置
                     </a>
-                    <a class="dropdown-item" href="./todo-list.html">
+                    <a class="dropdown-item" href="todo-list.html">
                       <span class="float-right"
                         ><span class="badge badge-primary">6</span></span
                       >
@@ -202,74 +205,191 @@
             </div>
           </div>
         </div>
-        <div class="my-3 my-md-5">
+        <div class="my-3 my-md-5 mt-5">
           <div class="container">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">
-                  我的主页
-                </li>
-              </ol>
-            </nav>
             <div class="row">
-              <div class="col-lg-4">
+              <div class="col-md-6 col-xl-4">
                 <div class="card">
-                  <div class="card-body">
-                    <div class="media">
-                      <span
-                        class="avatar avatar-xxl mr-5"
-                        style="background-image: url(../../assets/images/male.png)"
-                      ></span>
-                      <div class="media-body">
-                        <h4 class="mt-4">Ming Qiu</h4>
-                        <p class="text-muted mt-0">24320162202xxx</p>
-                      </div>
+                  <div class="card-header">
+                    <h3 class="card-title">OOAD</h3>
+                    <div class="card-options">
+                      <a
+                        class="card-options-collapse"
+                        data-toggle="card-collapse"
+                        href="#"
+                        ><i class="fe fe-chevron-up mr-1"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="list-group">
+                      <a
+                        href="./course-info.html"
+                        class="list-group-item list-group-item-action"
+                      >
+                        <span class="float-right">
+                          <i class="icon fe fe-chevron-right"></i>
+                        </span>
+                        <span class="float-left">
+                          <i class="icon fe fe-book mr-3"></i> 课程信息
+                        </span>
+                      </a>
+                      <a
+                        href="./course-class.html"
+                        class="list-group-item list-group-item-action"
+                      >
+                        <span class="float-right">
+                          <i class="icon fe fe-chevron-right"></i>
+                        </span>
+                        <span class="float-left">
+                          <i class="icon fe fe-briefcase mr-3"></i> 班级信息
+                        </span>
+                      </a>
+                      <a
+                        href="course-round.html"
+                        class="list-group-item list-group-item-action"
+                      >
+                        <span class="float-right">
+                          <i class="icon fe fe-chevron-right"></i>
+                        </span>
+                        <span class="float-left">
+                          <i class="icon fe fe-book-open mr-3"></i> 讨论课设置
+                        </span>
+                      </a>
+                      <a
+                        href="./course-group.html"
+                        class="list-group-item list-group-item-action"
+                      >
+                        <span class="float-right">
+                          <i class="icon fe fe-chevron-right"></i>
+                        </span>
+                        <span class="float-left">
+                          <i class="icon fe fe-slack mr-3"></i> 学生组队
+                        </span>
+                      </a>
+                      <a
+                        href="./course-grade.html"
+                        class="list-group-item list-group-item-action"
+                      >
+                        <span class="float-right">
+                          <i class="icon fe fe-chevron-right"></i>
+                        </span>
+                        <span class="float-left">
+                          <i class="icon fe fe-clipboard mr-3"></i> 学生成绩
+                        </span>
+                      </a>
+                      <a
+                        href="./course-share.html"
+                        class="list-group-item list-group-item-action"
+                      >
+                        <span class="float-right">
+                          <i class="icon fe fe-chevron-right"></i>
+                        </span>
+                        <span class="float-left">
+                          <i class="icon fe fe-send mr-3"></i> 共享设置
+                        </span>
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-8">
-                <div class="card p-3">
-                  <div class="d-flex align-items-center">
-                    <span class="stamp stamp-md bg-blue mr-3">
-                      <i class="fe fe-dollar-sign"></i>
-                    </span>
-                    <div>
-                      <h5 class="m-0">
-                        <a href="./course-home.html">我的课程</a>
-                      </h5>
-                      <small class="text-muted">12 waiting payments</small>
+              <div class="col-md-6 col-xl-4">
+                <div class="card card-collapsed">
+                  <div class="card-header">
+                    <h3 class="card-title">J2ee</h3>
+                    <div class="card-options">
+                      <a
+                        class="card-options-collapse"
+                        data-toggle="card-collapse"
+                        href="#"
+                        ><i class="fe fe-chevron-up mr-1"></i
+                      ></a>
                     </div>
                   </div>
-                </div>
-                <div class="card p-3">
-                  <div class="d-flex align-items-center">
-                    <span class="stamp stamp-md bg-blue mr-3">
-                      <i class="fe fe-dollar-sign"></i>
-                    </span>
-                    <div>
-                      <h5 class="m-0">
-                        <a href="course-round.html">我的讨论课</a>
-                      </h5>
-                      <small class="text-muted">12 waiting payments</small>
+                  <div class="card-body p-0">
+                    <div class="list-group">
+                      <a
+                        href="./"
+                        class="list-group-item list-group-item-action"
+                      >
+                        <span class="float-right">
+                          <i class="icon fe fe-chevron-right"></i>
+                        </span>
+                        <span class="float-left">
+                          <i class="icon fe fe-book mr-3"></i> 课程信息
+                        </span>
+                      </a>
+                      <a
+                        href="./"
+                        class="list-group-item list-group-item-action"
+                      >
+                        <span class="float-right">
+                          <i class="icon fe fe-chevron-right"></i>
+                        </span>
+                        <span class="float-left">
+                          <i class="icon fe fe-briefcase mr-3"></i> 班级信息
+                        </span>
+                      </a>
+                      <a
+                        href="./"
+                        class="list-group-item list-group-item-action"
+                      >
+                        <span class="float-right">
+                          <i class="icon fe fe-chevron-right"></i>
+                        </span>
+                        <span class="float-left">
+                          <i class="icon fe fe-book-open mr-3"></i> 讨论课设置
+                        </span>
+                      </a>
+                      <a
+                        href="./"
+                        class="list-group-item list-group-item-action"
+                      >
+                        <span class="float-right">
+                          <i class="icon fe fe-chevron-right"></i>
+                        </span>
+                        <span class="float-left">
+                          <i class="icon fe fe-slack mr-3"></i> 学生组队
+                        </span>
+                      </a>
+                      <a
+                        href="./"
+                        class="list-group-item list-group-item-action"
+                      >
+                        <span class="float-right">
+                          <i class="icon fe fe-chevron-right"></i>
+                        </span>
+                        <span class="float-left">
+                          <i class="icon fe fe-clipboard mr-3"></i> 学生成绩
+                        </span>
+                      </a>
+                      <a
+                        href="./"
+                        class="list-group-item list-group-item-action"
+                      >
+                        <span class="float-right">
+                          <i class="icon fe fe-chevron-right"></i>
+                        </span>
+                        <span class="float-left">
+                          <i class="icon fe fe-send mr-3"></i> 共享设置
+                        </span>
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="position-fixed">
+              <a
+                href="./course-create.html"
+                class="btn btn-green float-action-button"
+                ><i class="fe fe-plus"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
-	    <footer class="footer">
-		    <div class="container">
-			    <div class="row align-items-center flex-row-reverse">
-				    <div class="col-12 col-lg-auto mt-0 mt-lg-0 text-center">
-					    Copyright © 2018 <a href="https://github.com/XMUOOADIntellij/CourseManageSystem">Cms</a>.
-				    </div>
-			    </div>
-		    </div>
-	    </footer>
-
     </div>
+
   </body>
 </html>
