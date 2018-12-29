@@ -1934,34 +1934,7 @@ function getSeminarScoreByTeam(sid, tid) {
         }
     });
 }
-function getTeamShareList() {
-    $.ajax({
-        type: "get",
-        url: "http://xug98.cn/course/" + Cookies.get("course") + "/teamshare",
-        dataType: "json",
-        contentType: "application/json;",
-        success: function(data, textStatus, xhr) {
-            if (xhr.status === 200) {
-                // alert("获取成功");
-                console.log("teamsharelist");
 
-                for (let i = 0; i < data.length; i++) {
-                    console.log(data[i]);
-                }
-            }
-        },
-        statusCode: {
-            400: function() {
-                alert("teamsharelist");
-                alert("错误的ID格式");
-            },
-            404: function() {
-                alert("teamsharelist");
-                alert("未找到课程");
-            }
-        }
-    });
-}
 function getSeminarShareList() {
     $.ajax({
         type: "get",
@@ -2173,85 +2146,180 @@ function createSeminarShare() {
     });
 }
 
-
 function getTeamShareTask() {
     $.ajax({
         type: "get",
-        url: "http://xug98.cn/request/teamshare",
+        url: "http://xug98.cn/request/teamvaild" ,
         dataType: "json",
         contentType: "application/json;",
         success: function(data, textStatus, xhr) {
             if (xhr.status === 200) {
-                alert("获取成功");
-                console.log("teamshare");
-                for (let i = 0; i < data.length; i++) {
-                    console.log(data[i]);
-                }
+                // alert("获取成功");
+                console.log("classlist");
+                var content=document.getElementById("content");   //获取外围容器
+                var str="";
+
+                $.each(data, function(i, item) {
+                    console.log(item);
+                    str +=' <div class="col-lg-4">\n' +
+                        '                <div class="card">\n' +
+                        '                  <div class="card-body d-flex flex-column">\n' +
+                        '                    <h4><a href="#">共享'+item.courseName+'课程 组队</a></h4>\n' +
+                        '                    <div class="text-muted">\n' +
+                        '                      '+item.teacherName+'老师，向您发起共享'+item.courseName+'课程组队的申请。\n' +
+                        '                    </div>\n' +
+                        '                    <div class="d-flex align-items-center pt-5 mt-auto">\n' +
+                        '                      <div class="avatar avatar-md mr-3">Lxm</div>\n' +
+                        '                      <div><a class="text-default">'+item.teacherName+'</a></div>\n' +
+                        '\n' +
+                        '                      <div class="ml-auto text-muted">\n' +
+                        '                        <a\n' +
+                        '                          href="javascript:void(0)"\n' +
+                        '                          class="icon d-none d-md-inline-block ml-3"\n' +
+                        '                          onclick="updateTeamShare("reject",'+item.id+')"\n' +
+                        '                          ><i class="fe fe-thumbs-down mr-1"></i\n' +
+                        '                        ></a>\n' +
+                        '                        <a\n' +
+                        '                          href="javascript:void(0)"\n' +
+                        '                          onclick="updateTeamShare("accept",'+item.id+')"\n' +
+                        '                          class="icon d-none d-md-inline-block ml-3"\n' +
+                        '                          ><i class="fe fe-thumbs-up mr-1"></i\n' +
+                        '                        ></a>\n' +
+                        '                      </div>\n' +
+                        '                    </div>\n' +
+                        '                  </div>\n' +
+                        '                </div>\n' +
+                        '              </div>';
+                });
+                content.innerHTML=str;
+
             }
         },
         statusCode: {
             400: function() {
-                alert("teamshare");
                 alert("错误的ID格式");
             },
             404: function() {
-                alert("teamshare");
                 alert("未找到课程");
             }
         }
     });
 }
+
 function getSeminarShareTask() {
     $.ajax({
         type: "get",
-        url: "http://xug98.cn/request/seminarshare",
+        url: "http://xug98.cn/request/teamvaild" ,
         dataType: "json",
         contentType: "application/json;",
         success: function(data, textStatus, xhr) {
             if (xhr.status === 200) {
-                 alert("获取成功");
-                console.log("seminarshare");
+                // alert("获取成功");
+                console.log("classlist");
+                var content=document.getElementById("content");   //获取外围容器
+                var str="";
 
-                for (let i = 0; i < data.length; i++) {
-                    console.log(data[i]);
-                }
+                $.each(data, function(i, item) {
+                    console.log(item);
+                    str +=' <div class="col-lg-4">\n' +
+                        '                <div class="card">\n' +
+                        '                  <div class="card-body d-flex flex-column">\n' +
+                        '                    <h4><a href="#">申请'+item.courseName+'课程 讨论课</a></h4>\n' +
+                        '                    <div class="text-muted">\n' +
+                        '                      '+item.teacherName+'老师，向您发起共享'+item.teacherName+'课程讨论课的申请。\n' +
+                        '                    </div>\n' +
+                        '                    <div class="d-flex align-items-center pt-5 mt-auto">\n' +
+                        '                      <div class="avatar avatar-md mr-3">Lxm</div>\n' +
+                        '                      <div><a class="text-default">'+item.teacherName+' 老师</a></div>\n' +
+                        '\n' +
+                        '                      <div class="ml-auto text-muted">\n' +
+                        '                        <a\n' +
+                        '                          href="javascript:void(0)"\n' +
+                        '                          class="icon d-none d-md-inline-block ml-3"\n' +
+                        '                          onclick="updateSeminarShare("reject",'+item.id+')"\n' +
+                        '                          ><i class="fe fe-thumbs-down mr-1"></i\n' +
+                        '                        ></a>\n' +
+                        '                        <a\n' +
+                        '                          href="javascript:void(0)"\n' +
+                        '                          onclick="updateSeminarShare("accept",'+item.id+')"\n' +
+                        '                          class="icon d-none d-md-inline-block ml-3"\n' +
+                        '                          ><i class="fe fe-thumbs-up mr-1"></i\n' +
+                        '                        ></a>\n' +
+                        '                      </div>\n' +
+                        '                    </div>\n' +
+                        '                  </div>\n' +
+                        '                </div>\n' +
+                        '              </div>';
+                });
+                content.innerHTML=str;
+
             }
         },
         statusCode: {
             400: function() {
-                alert("seminarshare");
                 alert("错误的ID格式");
             },
             404: function() {
-                alert("seminarshare");
                 alert("未找到课程");
             }
         }
     });
 }
+
 function getTeamValidTask() {
     $.ajax({
         type: "get",
-        url: "http://xug98.cn/request/teamvaild",
+        url:  "http://xug98.cn/request/teamvaild",
         dataType: "json",
         contentType: "application/json;",
         success: function(data, textStatus, xhr) {
             if (xhr.status === 200) {
-                alert("获取成功");
-                console.log("teamvaild");
+                // alert("获取成功");
+                console.log("classlist");
+                var content=document.getElementById("content");   //获取外围容器
+                var str="";
 
-                for (let i = 0; i < data.length; i++) {
-                    console.log(data[i]);
-                }
+                $.each(data, function(i, item) {
+                    console.log(item);
+                    str +=' <div class="col-lg-4">\n' +
+                        '                <div class="card">\n' +
+                        '                  <div class="card-body d-flex flex-column">\n' +
+                        '                    <h4><a href="#">申请'+item.courseName+'课程 组队</a></h4>\n' +
+                        '                    <div class="text-muted">\n' +
+                        '                      '+item.courseName+'课程'+item.className+'的'+item.studentName+'同学向您申请组队\n' +
+                        '                    </div>\n' +
+                        '                    <div class="d-flex align-items-center pt-5 mt-auto">\n' +
+                        '                      <div class="avatar avatar-md mr-3">Lxm</div>\n' +
+                        '                      <div><a class="text-default">'+item.studentName+' </a></div>\n' +
+                        '\n' +
+                        '                      <div class="ml-auto text-muted">\n' +
+                        '                        <a\n' +
+                        '                          href="javascript:void(0)"\n' +
+                        '                          class="icon d-none d-md-inline-block ml-3"\n' +
+                        '                          onclick="updateTeamValid("reject",'+item.id+')"\n' +
+                        '                          ><i class="fe fe-thumbs-down mr-1"></i\n' +
+                        '                        ></a>\n' +
+                        '                        <a\n' +
+                        '                          href="javascript:void(0)"\n' +
+                        '                          onclick="updateTeamValid("accept",'+item.id+')"\n' +
+                        '                          class="icon d-none d-md-inline-block ml-3"\n' +
+                        '                          ><i class="fe fe-thumbs-up mr-1"></i\n' +
+                        '                        ></a>\n' +
+                        '                      </div>\n' +
+                        '                    </div>\n' +
+                        '                  </div>\n' +
+                        '                </div>\n' +
+                        '              </div>';
+                });
+                content.innerHTML=str;
+
             }
         },
         statusCode: {
             400: function() {
-                alert("teamvaild");
                 alert("错误的ID格式");
             },
             404: function() {
-                alert("teamvaild");
                 alert("未找到课程");
             }
         }
@@ -2259,15 +2327,14 @@ function getTeamValidTask() {
 }
 
 
-function updateTeamValid() {
-
+function updateTeamValid(handletype,id) {
     let ata = {
-        handletype: "accept"
+        handletype: handletype
     };
     console.log(ata);
     $.ajax({
         type: "put",
-        url: "http://xug98.cn/request/teamvalid/" + Cookies.get("teamvalid"),
+        url: "http://xug98.cn:8080/request/teamvalid/" +id,
         dataType: "json",
         data: JSON.stringify(ata),
         contentType: "application/json",
@@ -2282,20 +2349,19 @@ function updateTeamValid() {
             }
         }
     });
-    /*
-      window.location.reload();
-    */
+
+    window.location.reload();
 }
 
-function updateTeamShare() {
+function updateTeamShare(handletype,id) {
 
     let ata = {
-        handletype: "accept"
+        handletype: handletype
     };
     console.log(ata);
     $.ajax({
         type: "put",
-        url: "http://xug98.cn/request/teamshare/" + Cookies.get("teamshare"),
+        url: "http://xug98.cn:8080/request/teamvalid/" +id,
         dataType: "json",
         data: JSON.stringify(ata),
         contentType: "application/json",
@@ -2310,12 +2376,11 @@ function updateTeamShare() {
             }
         }
     });
-    /*
-      window.location.reload();
-    */
+
+    window.location.reload();
 }
 
-function updateSeminarShare() {
+function updateSeminarShare(handletype,id) {
 
     let ata = {
         handletype: "accept"
@@ -2323,9 +2388,7 @@ function updateSeminarShare() {
     console.log(ata);
     $.ajax({
         type: "put",
-        url:
-            "/request/seminarshare/" +
-            Cookies.get("seminarshare"),
+        url: "http://xug98.cn:8080/request/teamvalid/" +id,
         dataType: "json",
         data: JSON.stringify(ata),
         contentType: "application/json",
@@ -2340,10 +2403,17 @@ function updateSeminarShare() {
             }
         }
     });
-    /*
-      window.location.reload();
-    */
+
+    window.location.reload();
 }
+
+
+
+
+
+
+
+
 
 function getQuestionList(attendanceId) {
 
