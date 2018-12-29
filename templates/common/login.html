@@ -26,25 +26,37 @@
     <link href="../../static/css/fontawesome.min.css" rel="stylesheet" />
     <!--Dashboard Core-->
     <link href="../../static/css/dashboard.css" rel="stylesheet" />
+    <link href="../../static/css/tabler.css" rel="stylesheet" />
     <script src="../../static/js/vendors/jquery-3.2.1.min.js"></script>
     <script src="../../static/js/vendors/jquery-jvectormap-2.0.3.min.js"></script>
     <script src="../../static/js/vendors/jquery-jvectormap-de-merc.js"></script>
     <script src="../../static/js/vendors/jquery-jvectormap-world-mill.js"></script>
     <script src="../../static/js/vendors/jquery.sparkline.min.js"></script>
     <script src="../../static/js/vendors/jquery.tablesorter.min.js"></script>
+
     <script src="../../static/js/vendors/bootstrap.bundle.min.js"></script>
     <script src="../../static/js/vendors/chart.bundle.min.js"></script>
     <script src="../../static/js/vendors/selectize.min.js"></script>
+    <script src="../../static/js/vendors/sockjs-1.0.2.min.js"></script>
+    <script src="../../static/js/vendors/stomp.min.js"></script>
     <script src="../../static/js/vendors/js.cookie-2.2.0.min.js"></script>
     <script src="../../static/js/core.js"></script>
-    <link href="../../static/css/dashboard.css" rel="stylesheet" />
     <!-- c3.js Charts Plugin -->
     <link href="../../static/plugins/charts-c3/plugin.css" rel="stylesheet" />
     <!-- gijgo datepicker Plugin -->
-    <link href="../../static/plugins/charts-c3/plugin.css" rel="stylesheet" />
+    <link
+      href="../../static/plugins/gijgo/css/gijgo.min.css"
+      rel="stylesheet"
+    />
+    <script src="../../static/plugins/gijgo/js/gijgo.min.js"></script>
+    <!-- fab Plugin -->
+    <link href="../../static/plugins/fab/fab.css" rel="stylesheet" />
     <!-- Customize -->
     <link href="../../static/css/style.css" rel="stylesheet" />
-    <script src="../../static/js/common.js"></script>
+    <script src="../../static/js/control.js"></script>
+    <script src="../../static/js/convert.js"></script>
+    <script src="../../static/js/user.js"></script>
+    <script src="../../static/js/jwt.js"></script>
   </head>
   <body class="">
     <div class="page">
@@ -55,23 +67,22 @@
               <div class="text-center mb-6">
                 <img alt="" class="h-9" src="../../static/images/brand.png" />
               </div>
-              <form class="card" method="post" onsubmit="return bindUser();">
+              <div class="card">
                 <div class="card-body p-6">
                   <div class="card-title">登录您的账户</div>
                   <div class="form-group">
                     <label class="form-label">学号/职工号</label>
                     <input
-                      aria-describedby="emailHelp"
                       class="form-control"
                       id="account"
                       placeholder="2432016220xxxx"
-                      type="email"
+                      type="text"
                     />
                   </div>
                   <div class="form-group">
                     <label class="form-label"
                       >账户密码
-                      <a class="float-right small" href="forgot-identity.html"
+                      <a class="float-right small" href="forgot.html"
                         >忘记了密码?</a
                       >
                     </label>
@@ -82,24 +93,22 @@
                         placeholder="初始密码为123456"
                         type="password"
                       />
+                      <!--js未添加-->
                       <span class="input-icon-addon"
                         ><i class="fe fe-eye-off"></i
                       ></span>
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label class="custom-control custom-checkbox">
-                      <input class="custom-control-input" type="checkbox" />
-                      <span class="custom-control-label">记住我的密码</span>
-                    </label>
-                  </div>
                   <div class="form-footer">
-                    <button class="btn btn-primary btn-block" type="submit">
+                    <button
+                      class="btn btn-primary btn-block"
+                      onclick="bindUser()"
+                    >
                       登录
                     </button>
                   </div>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
@@ -107,7 +116,7 @@
       <footer class="footer">
         <div class="container">
           <div class="row align-items-center flex-row-reverse">
-            <div class="col-12 mt-0 mt-lg-0 text-center">
+            <div class="col-12 mt-0 mb-3 mt-lg-0 text-center">
               Copyright © 2018
               <a href="https://github.com/XMUOOADIntellij/CourseManageSystem"
                 >Cms</a

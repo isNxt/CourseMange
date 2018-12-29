@@ -27,12 +27,14 @@
 
     <!--Dashboard Core-->
     <link href="../../static/css/dashboard.css" rel="stylesheet" />
+    <link href="../../static/css/tabler.css" rel="stylesheet" />
     <script src="../../static/js/vendors/jquery-3.2.1.min.js"></script>
     <script src="../../static/js/vendors/jquery-jvectormap-2.0.3.min.js"></script>
     <script src="../../static/js/vendors/jquery-jvectormap-de-merc.js"></script>
     <script src="../../static/js/vendors/jquery-jvectormap-world-mill.js"></script>
     <script src="../../static/js/vendors/jquery.sparkline.min.js"></script>
     <script src="../../static/js/vendors/jquery.tablesorter.min.js"></script>
+
     <script src="../../static/js/vendors/bootstrap.bundle.min.js"></script>
     <script src="../../static/js/vendors/chart.bundle.min.js"></script>
     <script src="../../static/js/vendors/selectize.min.js"></script>
@@ -40,14 +42,27 @@
 
     <script src="../../static/js/core.js"></script>
     <link href="../../static/css/dashboard.css" rel="stylesheet" />
+    <link href="../../static/css/tabler.css" rel="stylesheet" />
     <!-- c3.js Charts Plugin -->
     <link href="../../static/plugins/charts-c3/plugin.css" rel="stylesheet" />
     <!-- gijgo datepicker Plugin -->
-    <link href="../../static/plugins/charts-c3/plugin.css" rel="stylesheet" />
+    <link
+      href="../../static/plugins/gijgo/css/gijgo.min.css"
+      rel="stylesheet"
+    />
+    <script src="../../static/plugins/gijgo/js/gijgo.min.js"></script>
+    <!-- fab Plugin -->
+    <link href="../../static/plugins/fab/fab.css" rel="stylesheet" />
     <!-- Customize -->
     <link href="../../static/css/style.css" rel="stylesheet" />
-    <script src="../../static/js/common.js"></script>
+    <script src="../../static/js/jwt.js"></script>
+    <script src="../../static/js/control.js"></script>
+    <script src="../../static/js/convert.js"></script>
+    <script src="../../static/js/user.js"></script>
     <script src="../../static/js/teacher.js"></script>
+    <script src="../../static/js/user.js"></script>
+    <script src="../../static/js/teacher.js"></script>
+
   </head>
   <body>
     <div class="page">
@@ -60,56 +75,14 @@
                   alt="logo"
                   class="header-brand-img"
                   src="../../static/images/brand.png"
-                />Cms
+                />
+                XCms
               </a>
               <div class="d-flex order-lg-2 ml-auto">
                 <div class="dropdown d-none d-md-flex">
-                  <a class="nav-link icon" data-toggle="dropdown">
+                  <a class="nav-link icon" href="todo-list.html">
                     <i class="fe fe-bell"></i> <span class="nav-unread"></span>
                   </a>
-                  <div
-                    class="dropdown-menu dropdown-menu-right dropdown-menu-arrow"
-                  >
-                    <a class="dropdown-item d-flex" href="#">
-                      <span
-                        class="avatar mr-3 align-self-center"
-                        style="background-image: url(../../static/images/male.png)"
-                      ></span>
-                      <div>
-                        <strong>Nathan</strong> pushed new commit: Fix page load
-                        performance issue.
-                        <div class="small text-muted">10 minutes ago</div>
-                      </div>
-                    </a>
-                    <a class="dropdown-item d-flex" href="#">
-                      <span
-                        class="avatar mr-3 align-self-center"
-                        style="background-image: url(../../static/images/male.png)"
-                      ></span>
-                      <div>
-                        <strong>Alice</strong> started new task: Tabler UI
-                        design.
-                        <div class="small text-muted">1 hour ago</div>
-                      </div>
-                    </a>
-                    <a class="dropdown-item d-flex" href="#">
-                      <span
-                        class="avatar mr-3 align-self-center"
-                        style="background-image: url(../../static/images/male.png)"
-                      ></span>
-                      <div>
-                        <strong>Rose</strong> deployed new version of NodeJS
-                        REST Api V3
-                        <div class="small text-muted">2 hours ago</div>
-                      </div>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a
-                      class="dropdown-item text-center text-muted-dark"
-                      href="#"
-                      >Mark all as read</a
-                    >
-                  </div>
                 </div>
                 <div class="dropdown">
                   <a
@@ -122,26 +95,24 @@
                       style="background-image: url(../../static/images/male.png)"
                     ></span>
                     <span class="ml-2 d-none d-lg-block">
-                      <span class="text-default">Jane Pearson</span>
-                      <small class="text-muted d-block mt-1"
-                        >Administrator</small
-                      >
+                      <span class="text-default" id="header-name"></span>
+                      <small
+                        class="text-muted d-block mt-1"
+                        id="header-role"
+                      ></small>
                     </span>
                   </a>
                   <div
                     class="dropdown-menu dropdown-menu-right dropdown-menu-arrow"
                   >
-                    <a class="dropdown-item" href="account-setting.html">
+                    <a class="dropdown-item" href="./account-setting.html">
                       <i class="dropdown-icon fe fe-settings"></i> 个人设置
                     </a>
-                    <a class="dropdown-item" href="todo-list.html">
-                      <span class="float-right"
-                        ><span class="badge badge-primary">6</span></span
-                      >
+                    <a class="dropdown-item" href="./todo-list.html">
                       <i class="dropdown-icon fe fe-mail"></i> 待办事项
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="../common/help.html">
+                    <a class="dropdown-item" href="./help.html">
                       <i class="dropdown-icon fe fe-help-circle"></i> 获取帮助
                     </a>
                     <a class="dropdown-item" href="../common/login.html">
@@ -164,19 +135,6 @@
         <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
           <div class="container">
             <div class="row align-items-center">
-              <div class="col-lg-3 ml-auto">
-                <form class="input-icon my-3 my-lg-0">
-                  <input
-                    class="form-control header-search"
-                    placeholder="Search&hellip;"
-                    tabindex="1"
-                    type="search"
-                  />
-                  <div class="input-icon-addon">
-                    <i class="fe fe-search"></i>
-                  </div>
-                </form>
-              </div>
               <div class="col-lg order-lg-first">
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                   <li class="nav-item pl-5">
@@ -195,7 +153,7 @@
                     >
                   </li>
                   <li class="nav-item pl-5">
-                    <a class="nav-link" href="going.html"
+                    <a class="nav-link" href="progress.html"
                       ><i class="fe fe-play-circle"></i> 正在进行中</a
                     >
                   </li>
@@ -221,120 +179,26 @@
             </nav>
             <div class="row">
               <div class="col-12">
-                <form
-                  action="./course-home.html"
-                  class="card"
-                  method="post"
-                  onsubmit="return createClass();"
-                >
+                <form class="card">
                   <div class="card-header">
                     <h3 class="card-title">新建班级</h3>
                   </div>
                   <div class="card-body">
                     <div class="form-group">
-                      <label class="form-label">班级名称</label>
-                      <div class="row gutters-xs">
-                        <div class="col-md-3 col-lg-2 mb-3">
-                          <div class="input-group ">
-                            <span class="input-group-prepend">
-                              <span class="input-group-text">年级</span>
-                            </span>
-                            <select
-                              class="form-control custom-select"
-                              name="user[month]"
-                            >
-                              <option selected="selected" value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                              <option value="6">6</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-md-3 col-lg-2">
-                          <div class="input-group ">
-                            <span class="input-group-prepend">
-                              <span class="input-group-text">班级</span>
-                            </span>
-                            <select
-                              class="form-control custom-select"
-                              name="user[month]"
-                            >
-                              <option selected="selected" value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                              <option value="6">6</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
+                      <label class="form-label">年级</label>
+                      <input class="form-control" id="grade" name="example-text-input" placeholder="2016" type="text">
                     </div>
                     <div class="form-group">
-                      <label class="form-label">讨论课周次</label>
-                      <div class="row gutters-xs">
-                        <div class="col-md-3 col-lg-2">
-                          <div class="input-group">
-                            <span class="input-group-prepend">
-                              <span class="input-group-text">星期</span>
-                            </span>
-                            <select
-                              class="form-control custom-select"
-                              name="user[month]"
-                            >
-                              <option selected="selected" value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                              <option value="6">6</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
+                      <label class="form-label">班级</label>
+                      <input class="form-control" id="class" name="example-text-input" placeholder="1" type="text">
                     </div>
                     <div class="form-group">
-                      <label class="form-label">讨论课节次</label>
-                      <div class="row gutters-xs">
-                        <div class="col-md-3 col-lg-2 mb-3">
-                          <div class="input-group">
-                            <span class="input-group-prepend">
-                              <span class="input-group-text"> 开始</span>
-                            </span>
-                            <select
-                              class="form-control custom-select"
-                              name="user[month]"
-                            >
-                              <option selected="selected" value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                              <option value="6">6</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-md-3 col-lg-2">
-                          <div class="input-group">
-                            <span class="input-group-prepend">
-                              <span class="input-group-text">结束</span>
-                            </span>
-                            <select
-                              class="form-control custom-select"
-                              name="user[month]"
-                            >
-                              <option selected="selected" value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                              <option value="6">6</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
+                      <label class="form-label">讨论课时间</label>
+                      <input class="form-control" id="time" name="example-text-input" placeholder="周三上午1,2节" type="text">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">讨论课地点</label>
+                      <input class="form-control" id="location" name="example-text-input" placeholder="海韵201" type="text">
                     </div>
                     <div class="form-group">
                       <div class="form-label">班级学生名单</div>
@@ -345,6 +209,7 @@
                               class="custom-file-input"
                               name="example-file-input-custom"
                               type="file"
+                              id="file"
                             />
                             <label class="custom-file-label">选择文件</label>
                           </div>
@@ -357,7 +222,10 @@
                       <a class="btn btn-link" href="./course-class.html"
                         >取消</a
                       >
-                      <button class="btn btn-primary ml-auto" type="submit">
+                      <button
+                        class="btn btn-primary ml-auto"
+                        onclick="createClass()"
+                      >
                         确认创建
                       </button>
                     </div>

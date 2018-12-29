@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+            name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <meta content="en" http-equiv="Content-Language" />
+    <meta content="#2d89ef" name="msapplication-TileColor" />
+    <meta content="#4188c9" name="theme-color" />
+    <meta
+            content="black-translucent"
+            name="apple-mobile-web-app-status-bar-style"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="mobile-web-app-capable" />
+    <meta content="True" name="HandheldFriendly" />
+    <meta content="320" name="MobileOptimized" />
+    <link href="../favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!-- Generated: 2018-04-16 09:29:05 +0200 -->
+    <title>我的主页</title>
+    <!-- Font -->
+    <link href="../../static/css/fontawesome.min.css" rel="stylesheet" />
+
+    <!--Dashboard Core-->
+    <link href="../../static/css/dashboard.css" rel="stylesheet" />
+    <link href="../../static/css/tabler.css" rel="stylesheet" />
+    <script src="../../static/js/vendors/jquery-3.2.1.min.js"></script>
+    <script src="../../static/js/vendors/jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="../../static/js/vendors/jquery-jvectormap-de-merc.js"></script>
+    <script src="../../static/js/vendors/jquery-jvectormap-world-mill.js"></script>
+    <script src="../../static/js/vendors/jquery.sparkline.min.js"></script>
+    <script src="../../static/js/vendors/jquery.tablesorter.min.js"></script>
+
+    <script src="../../static/js/vendors/bootstrap.bundle.min.js"></script>
+<script src="../../static/js/vendors/chart.bundle.min.js"></script>
+    <script src="../../static/js/vendors/selectize.min.js"></script>
+    <script src="../../static/js/vendors/js.cookie-2.2.0.min.js"></script>
+
+    <script src="../../static/js/core.js"></script>
+    <link href="../../static/css/dashboard.css" rel="stylesheet" />
+    <link href="../../static/css/tabler.css" rel="stylesheet" />
+    <!-- c3.js Charts Plugin -->
+    <link href="../../static/plugins/charts-c3/plugin.css" rel="stylesheet" />
+    <!-- gijgo datepicker Plugin -->
+    <link href="../../static/plugins/gijgo/css/gijgo.min.css" rel="stylesheet" />
+    <script src="../../static/plugins/gijgo/js/gijgo.min.js"></script>
+    <!-- fab Plugin -->
+    <link href="../../static/plugins/fab/fab.css" rel="stylesheet" />
+    <!-- Customize -->
+    <link href="../../static/css/style.css" rel="stylesheet" />
+    <script src="../../static/js/jwt.js"></script>
+    <script src="../../static/js/convert.js"></script>
+    <script src="../../static/js/user.js"></script>
+    <script src="../../static/js/teacher.js"></script>
+</head>
+<body class="">
+<div class="page">
+    <div class="page-main">
+        <div class="my-3 my-md-5">
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="page-title">
+                        测试
+                    </h1>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <div class="form-label">测试文件</div>
+                            <div class="custom-file my-3">
+                                <input
+                                        type="file"
+                                        id="file"
+                                        class="custom-file-input"
+                                        name="example-file-input-custom"
+                                />
+                                <label class="custom-file-label">选择文件</label>
+                            </div>
+                            <button class="btn btn-primary btn-block my-3" onclick="updateSeminarByClass()">updateSeminarByClass</button>
+                            <button class="btn btn-primary btn-block my-3" onclick="createClass()">createClass</button>
+                            <button class="btn btn-primary btn-block my-3" onclick="updateClass()">updateClass</button>
+
+                        </div>
+                        <div class="form-group">
+                            <div class="form-label">测试时间</div>
+                            <div class="row gutters-xs">
+                                <div class="col-lg-6">
+                                    <label class="form-label">开始时间</label>
+                                    <div class="row gutters-xs px-1">
+                                        <input id="input-start" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label class="form-label">结束时间</label>
+                                    <div class="row gutters-xs px-1">
+                                        <input id="input-end" />
+                                    </div>
+                                </div>
+
+                            </div>
+                            <button class="btn btn-primary btn-block my-3" onclick="createCourse()">createCourse</button>
+                            <button class="btn btn-primary btn-block my-3" onclick="updateSeminar()">updateSeminar</button>
+                            <button class="btn btn-primary btn-block my-3" onclick="createSeminar()">createSeminar</button>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-4">
+
+                        <button class="btn btn-primary btn-block my-3" onclick="bindUser()">bindUser</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getUserInfo()">getUserInfo</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="sendPassword()">sendPassword</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="editPassword()">editPassword</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="editEmail()">editEmail</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="activeTeacher()">activeTeacher</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getCourseList()">getCourseList</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getAllCourse()">getAllCourse</button>
+
+                        <button class="btn btn-primary btn-block my-3" onclick="getCourseInfo()">getCourseInfo</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getClassList()">getClassList</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="deleteClass()">deleteClass</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getRoundList()">getRoundList</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getSeminarList()">getSeminarList</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getSeminarByClass()">getSeminarByClass</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getSeminarScoreByClass()">getSeminarScoreByClass</button>
+
+                        <button class="btn btn-primary btn-block my-3" onclick="updateSeminarScoreByClass()">updateSeminarScoreByClass</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="deleteSeminar()">deleteSeminar</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getAttendanceByClass()">getAttendanceByClass</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getPptByClass()">getPptByClass</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getReportByClass()">getReportByClass</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getPptByAttendance()">getPptByAttendance</button>
+
+                        <button class="btn btn-primary btn-block my-3" onclick="getReportByAttendance()">getReportByAttendance</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getTeam()">getTeam</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getMyTeam()">getMyTeam</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="createTeam()">createTeam</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="updateTeam()">updateTeam</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getNoTeam()">getNoTeam</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="deleteCourse()">deleteCourse</button>
+
+                        <button class="btn btn-primary btn-block my-3" onclick="getRoundScoreByCourse()">getRoundScoreByCourse</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getSeminarScoreByRound()">getSeminarScoreByRound</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getTeamShareList()">getTeamShareList</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getSeminarShareList()">getSeminarShareList</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="deleteSeminarShare()">deleteSeminarShare</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="deleteTeamShare()">deleteTeamShare</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="updateRound()">updateRound</button>
+
+
+                        <button class="btn btn-primary btn-block my-3" onclick="createRound()">createRound</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="createTeamShare()">createTeamShare</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="createSeminarShare()">createSeminarShare</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getTeamShareTask()">getTeamShareTask</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getSeminarShareTask()">getSeminarShareTask</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getTeamValidTask()">getTeamValidTask</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="updateTeamValid()">updateTeamValid</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="updateTeamShare()">updateTeamShare</button>
+
+
+                        <button class="btn btn-primary btn-block my-3" onclick="updateSeminarShare()">updateSeminarShare</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getQuestionList()">getQuestionList</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="updatePresentScoreByTeam()">updatePresentScoreByTeam</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="updateQuestionScoreByTeam()">updateQuestionScoreByTeam</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="activeStudent()">activeStudent</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getCurrentSeminar()">getCurrentSeminar</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getCurrentAttendance()">getCurrentAttendance</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="deleteTeam()">deleteTeam</button>
+
+                        <button class="btn btn-primary btn-block my-3" onclick="deleteTeamMember()">deleteTeamMember</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getMyAttendance()">getMyAttendance</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getAttendanceScore()">getAttendanceScore</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="createAttendance()">createAttendance</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="deleteAttendance()">deleteAttendance</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="updateAttendance()">updateAttendance</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="bindAdmin()">bindAdmin</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="createTeacher()">createTeacher</button>
+
+                        <button class="btn btn-primary btn-block my-3" onclick="updateTeacher()">updateTeacher</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="updateStudent()">updateStudent</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="deleteTeacher()">deleteTeacher</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="deleteStudent()">deleteStudent</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="resetTeacher()">resetTeacher</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="resetStudent()">resetStudent</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="searchTeacher()">searchTeacher</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="searchStudent()">searchStudent</button>
+
+                        <button class="btn btn-primary btn-block my-3" onclick="getAllTeacher()">getAllTeacher</button>
+                        <button class="btn btn-primary btn-block my-3" onclick="getAllTeacher()">getAllTeacher</button>
+
+                    </div>
+
+
+
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+<script>
+    $("#input-start").datetimepicker({
+        uiLibrary: "bootstrap4",
+        modal: true,
+        footer: true
+    });
+    $("#input-end").datetimepicker({
+        uiLibrary: "bootstrap4",
+        modal: true,
+        footer: true
+    });
+</script>
+</html>

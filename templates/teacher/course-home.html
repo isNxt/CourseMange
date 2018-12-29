@@ -27,12 +27,14 @@
 
     <!--Dashboard Core-->
     <link href="../../static/css/dashboard.css" rel="stylesheet" />
+    <link href="../../static/css/tabler.css" rel="stylesheet" />
     <script src="../../static/js/vendors/jquery-3.2.1.min.js"></script>
     <script src="../../static/js/vendors/jquery-jvectormap-2.0.3.min.js"></script>
     <script src="../../static/js/vendors/jquery-jvectormap-de-merc.js"></script>
     <script src="../../static/js/vendors/jquery-jvectormap-world-mill.js"></script>
     <script src="../../static/js/vendors/jquery.sparkline.min.js"></script>
     <script src="../../static/js/vendors/jquery.tablesorter.min.js"></script>
+
     <script src="../../static/js/vendors/bootstrap.bundle.min.js"></script>
     <script src="../../static/js/vendors/chart.bundle.min.js"></script>
     <script src="../../static/js/vendors/selectize.min.js"></script>
@@ -40,16 +42,28 @@
 
     <script src="../../static/js/core.js"></script>
     <link href="../../static/css/dashboard.css" rel="stylesheet" />
+    <link href="../../static/css/tabler.css" rel="stylesheet" />
     <!-- c3.js Charts Plugin -->
     <link href="../../static/plugins/charts-c3/plugin.css" rel="stylesheet" />
     <!-- gijgo datepicker Plugin -->
-    <link href="../../static/plugins/charts-c3/plugin.css" rel="stylesheet" />
+    <link
+      href="../../static/plugins/gijgo/css/gijgo.min.css"
+      rel="stylesheet"
+    />
+    <script src="../../static/plugins/gijgo/js/gijgo.min.js"></script>
+    <!-- fab Plugin -->
+    <link href="../../static/plugins/fab/fab.css" rel="stylesheet" />
     <!-- Customize -->
     <link href="../../static/css/style.css" rel="stylesheet" />
-    <script src="../../static/js/common.js"></script>
+    <script src="../../static/js/jwt.js"></script>
+    <script src="../../static/js/control.js"></script>
+    <script src="../../static/js/convert.js"></script>
+    <script src="../../static/js/user.js"></script>
+    <script src="../../static/js/teacher.js"></script>
+    <script src="../../static/js/user.js"></script>
     <script src="../../static/js/teacher.js"></script>
   </head>
-  <body>
+  <body onload="getCourseList()">
     <div class="page">
       <div class="page-main">
         <div class="header py-4">
@@ -60,56 +74,14 @@
                   alt="logo"
                   class="header-brand-img"
                   src="../../static/images/brand.png"
-                />Cms
+                />
+                XCms
               </a>
               <div class="d-flex order-lg-2 ml-auto">
                 <div class="dropdown d-none d-md-flex">
-                  <a class="nav-link icon" data-toggle="dropdown">
+                  <a class="nav-link icon" href="todo-list.html">
                     <i class="fe fe-bell"></i> <span class="nav-unread"></span>
                   </a>
-                  <div
-                    class="dropdown-menu dropdown-menu-right dropdown-menu-arrow"
-                  >
-                    <a class="dropdown-item d-flex" href="#">
-                      <span
-                        class="avatar mr-3 align-self-center"
-                        style="background-image: url(../../static/images/male.png)"
-                      ></span>
-                      <div>
-                        <strong>Nathan</strong> pushed new commit: Fix page load
-                        performance issue.
-                        <div class="small text-muted">10 minutes ago</div>
-                      </div>
-                    </a>
-                    <a class="dropdown-item d-flex" href="#">
-                      <span
-                        class="avatar mr-3 align-self-center"
-                        style="background-image: url(../../static/images/male.png)"
-                      ></span>
-                      <div>
-                        <strong>Alice</strong> started new task: Tabler UI
-                        design.
-                        <div class="small text-muted">1 hour ago</div>
-                      </div>
-                    </a>
-                    <a class="dropdown-item d-flex" href="#">
-                      <span
-                        class="avatar mr-3 align-self-center"
-                        style="background-image: url(../../static/images/male.png)"
-                      ></span>
-                      <div>
-                        <strong>Rose</strong> deployed new version of NodeJS
-                        REST Api V3
-                        <div class="small text-muted">2 hours ago</div>
-                      </div>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a
-                      class="dropdown-item text-center text-muted-dark"
-                      href="#"
-                      >Mark all as read</a
-                    >
-                  </div>
                 </div>
                 <div class="dropdown">
                   <a
@@ -122,26 +94,24 @@
                       style="background-image: url(../../static/images/male.png)"
                     ></span>
                     <span class="ml-2 d-none d-lg-block">
-                      <span class="text-default">Jane Pearson</span>
-                      <small class="text-muted d-block mt-1"
-                        >Administrator</small
-                      >
+                      <span class="text-default" id="header-name"></span>
+                      <small
+                        class="text-muted d-block mt-1"
+                        id="header-role"
+                      ></small>
                     </span>
                   </a>
                   <div
                     class="dropdown-menu dropdown-menu-right dropdown-menu-arrow"
                   >
-                    <a class="dropdown-item" href="account-setting.html">
+                    <a class="dropdown-item" href="./account-setting.html">
                       <i class="dropdown-icon fe fe-settings"></i> 个人设置
                     </a>
-                    <a class="dropdown-item" href="todo-list.html">
-                      <span class="float-right"
-                        ><span class="badge badge-primary">6</span></span
-                      >
+                    <a class="dropdown-item" href="./todo-list.html">
                       <i class="dropdown-icon fe fe-mail"></i> 待办事项
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="../common/help.html">
+                    <a class="dropdown-item" href="./help.html">
                       <i class="dropdown-icon fe fe-help-circle"></i> 获取帮助
                     </a>
                     <a class="dropdown-item" href="../common/login.html">
@@ -164,19 +134,6 @@
         <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
           <div class="container">
             <div class="row align-items-center">
-              <div class="col-lg-3 ml-auto">
-                <form class="input-icon my-3 my-lg-0">
-                  <input
-                    class="form-control header-search"
-                    placeholder="Search&hellip;"
-                    tabindex="1"
-                    type="search"
-                  />
-                  <div class="input-icon-addon">
-                    <i class="fe fe-search"></i>
-                  </div>
-                </form>
-              </div>
               <div class="col-lg order-lg-first">
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                   <li class="nav-item pl-5">
@@ -195,7 +152,7 @@
                     >
                   </li>
                   <li class="nav-item pl-5">
-                    <a class="nav-link" href="going.html"
+                    <a class="nav-link" href="progress.html"
                       ><i class="fe fe-play-circle"></i> 正在进行中</a
                     >
                   </li>
@@ -213,13 +170,19 @@
                 </li>
               </ol>
             </nav>
-            <div class="row">
-              <div class="col-md-6 col-xl-4">
+            <div class="row" id="content">
+                <!--id="courseId"-->
                 <div class="card">
                   <div class="card-header">
                     <h3 class="card-title mr-4">OOAD</h3>
                     <span class="btn btn-outline-secondary py-0">主</span>
                     <div class="card-options">
+                      <a
+                        href="#"
+                        class="card-options-remove"
+                        onclick="deleteCourse()"
+                        ><i class="fe fe-trash"></i
+                      ></a>
                       <a
                         class="card-options-collapse"
                         data-toggle="card-collapse"
@@ -233,6 +196,7 @@
                       <a
                         href="./course-info.html"
                         class="list-group-item list-group-item-action"
+                        onclick="jumpFromCourseHome()"
                       >
                         <span class="float-right">
                           <i class="icon fe fe-chevron-right"></i>
@@ -244,6 +208,7 @@
                       <a
                         href="./course-class.html"
                         class="list-group-item list-group-item-action"
+                        onclick="jumpFromCourseHome()"
                       >
                         <span class="float-right">
                           <i class="icon fe fe-chevron-right"></i>
@@ -253,19 +218,23 @@
                         </span>
                       </a>
                       <a
-                        href="course-round.html"
+                        href="./course-round.html"
                         class="list-group-item list-group-item-action"
+                        onclick="jumpFromCourseHome()"
+
                       >
                         <span class="float-right">
                           <i class="icon fe fe-chevron-right"></i>
                         </span>
                         <span class="float-left">
-                          <i class="icon fe fe-book-open mr-3"></i> 讨论课设置
+                          <i class="icon fe fe-book-open mr-3"></i> 课程轮次
                         </span>
                       </a>
                       <a
-                        href="./course-group.html"
+                        href="course-team.html"
                         class="list-group-item list-group-item-action"
+                        onclick="jumpFromCourseHome()"
+
                       >
                         <span class="float-right">
                           <i class="icon fe fe-chevron-right"></i>
@@ -276,8 +245,10 @@
                       </a>
 
                       <a
-                        href="./course-grade.html"
+                        href="course-score.html"
                         class="list-group-item list-group-item-action"
+                        onclick="jumpFromCourseHome()"
+
                       >
                         <span class="float-right">
                           <i class="icon fe fe-chevron-right"></i>
@@ -290,6 +261,8 @@
                       <a
                         href="./course-share.html"
                         class="list-group-item list-group-item-action"
+                        onclick="jumpFromCourseHome()"
+
                       >
                         <span class="float-right">
                           <i class="icon fe fe-chevron-right"></i>
@@ -302,108 +275,20 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-xl-4">
-                <div class="card card-collapsed">
-                  <div class="card-header">
-                    <h3 class="card-title">J2ee</h3>
-                    <div class="card-options">
-                      <a
-                        class="card-options-collapse"
-                        data-toggle="card-collapse"
-                        href="#"
-                        ><i class="fe fe-chevron-up mr-1"></i
-                      ></a>
-                    </div>
-                  </div>
-                  <div class="card-body p-0">
-                    <div class="list-group">
-                      <a
-                        href="./"
-                        class="list-group-item list-group-item-action"
-                      >
-                        <span class="float-right">
-                          <i class="icon fe fe-chevron-right"></i>
-                        </span>
-                        <span class="float-left">
-                          <i class="icon fe fe-book mr-3"></i> 课程信息
-                        </span>
-                      </a>
-                      <a
-                        href="./"
-                        class="list-group-item list-group-item-action"
-                      >
-                        <span class="float-right">
-                          <i class="icon fe fe-chevron-right"></i>
-                        </span>
-                        <span class="float-left">
-                          <i class="icon fe fe-briefcase mr-3"></i> 班级信息
-                        </span>
-                      </a>
-                      <a
-                        href="./"
-                        class="list-group-item list-group-item-action"
-                      >
-                        <span class="float-right">
-                          <i class="icon fe fe-chevron-right"></i>
-                        </span>
-                        <span class="float-left">
-                          <i class="icon fe fe-book-open mr-3"></i> 讨论课设置
-                        </span>
-                      </a>
-                      <a
-                        href="./"
-                        class="list-group-item list-group-item-action"
-                      >
-                        <span class="float-right">
-                          <i class="icon fe fe-chevron-right"></i>
-                        </span>
-                        <span class="float-left">
-                          <i class="icon fe fe-slack mr-3"></i> 学生组队
-                        </span>
-                      </a>
-
-                      <a
-                        href="./"
-                        class="list-group-item list-group-item-action"
-                      >
-                        <span class="float-right">
-                          <i class="icon fe fe-chevron-right"></i>
-                        </span>
-                        <span class="float-left">
-                          <i class="icon fe fe-clipboard mr-3"></i> 学生成绩
-                        </span>
-                      </a>
-
-                      <a
-                        href="./"
-                        class="list-group-item list-group-item-action"
-                      >
-                        <span class="float-right">
-                          <i class="icon fe fe-chevron-right"></i>
-                        </span>
-                        <span class="float-left">
-                          <i class="icon fe fe-send mr-3"></i> 共享设置
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="position-fixed">
+            <nav class="fab">
               <a
+                class="buttons"
+                tooltip="新建课程"
                 href="./course-create.html"
-                class="btn btn-green float-action-button shadow-lg"
-                ><i class="fe fe-plus"></i
               ></a>
-            </div>
+            </nav>
           </div>
         </div>
       </div>
       <footer class="footer">
         <div class="container">
           <div class="row align-items-center flex-row-reverse">
-            <div class="col-12 mt-0 mt-lg-0 text-center">
+            <div class="col-12 mt-0 mb-3 mt-lg-0 text-center">
               Copyright © 2018
               <a href="https://github.com/XMUOOADIntellij/CourseManageSystem"
                 >Cms</a
@@ -414,4 +299,5 @@
       </footer>
     </div>
   </body>
+
 </html>
