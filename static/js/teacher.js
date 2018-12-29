@@ -2149,7 +2149,8 @@ function createSeminarShare() {
 function getTeamShareTask() {
     $.ajax({
         type: "get",
-        url: "http://xug98.cn/request/teamvaild" ,
+        // url: "http://xug98.cn/request/teamvaild" ,
+        url: "data.json",
         dataType: "json",
         contentType: "application/json;",
         success: function(data, textStatus, xhr) {
