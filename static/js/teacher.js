@@ -395,7 +395,8 @@ function getRoundList() {
     console.log(courseId);
     $.ajax({
         type: "get",
-        url: "http://xug98.cn/course/" + Cookies.get("course") + "/round",
+        // url: "http://xug98.cn/course/" + Cookies.get("course") + "/round",
+        url:"round.json",
         dataType: "json",
         contentType: "application/json;",
         success: function(data, textStatus, xhr) {
@@ -433,9 +434,6 @@ function getRoundList() {
                     getSeminarList(item.id);
                 });
                 content.innerHTML=str;
-
-
-
             }
         },
         statusCode: {
@@ -455,11 +453,11 @@ function getRoundList() {
 function getSeminarList(roundId) {
     $.ajax({
         type: "get",
-        url: "http://xug98.cn/round/" + roundId + "/seminar",
+        // url: "http://xug98.cn/round/" + roundId + "/seminar",
+        url: "seminar.json",
         dataType: "json",
         contentType: "application/json;",
         success: function(data, textStatus, xhr) {
-            if (xhr.status === 200) {
                 // alert("获取成功");
                 // console.log("seminarList");
                 var content=document.getElementById("round"+roundId);   //获取外围容器
@@ -516,7 +514,7 @@ function getSeminarList(roundId) {
 
 
 
-            }
+
         },
         statusCode: {
             500: function(data) {
