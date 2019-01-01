@@ -546,7 +546,7 @@ function deleteCourse() {
 function getClassItems() {
     $.ajax({
         type: "get",
-        url: "http://xug98.cn/course/" + Cookies.get("course")",
+        url: "http://xug98.cn/course/" + Cookies.get("course"),
         dataType: "json",
         contentType: "application/json;",
         success: function(data, textStatus, xhr) {
