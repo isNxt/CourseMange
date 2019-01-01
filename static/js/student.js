@@ -141,8 +141,8 @@ function getTeam() {
     $.ajax({
         type: "get",
         async : false,
-        url: "../../static/json/team-list.json",
-        // url: "http://xug98.cn/course/" + Cookies.get("course") + "/team",
+        // url: "../../static/json/team-list.json",
+        url: "http://xug98.cn/course/" + Cookies.get("course") + "/team",
         dataType: "json",
         contentType: "application/json;",
         success: function(data, textStatus, xhr) {
@@ -181,7 +181,7 @@ function getTeam() {
                         '                    <div class="d-flex align-items-center">\n' +
                         '                      <span class="stamp stamp-md bg-blue ml-1 mr-4">'+team.klassSerial+'-'+team.teamSerial+'</span>\n' +
                         '                      <div>\n' +
-                        '                        <h4 class="m-0"><small>'+team.teamName+'</small></h4>\n' +
+                        '                        <h4 class="m-0"><small>'+team.name+'</small></h4>\n' +
                         '                        <small class="text-danger">'+status+'</small>\n' +
                         '                      </div>\n' +
                         '                    </div>\n' +
@@ -229,31 +229,32 @@ function getTeam() {
 function getMyTeam() {
     $.ajax({
         type: "get",
+        async : false,
         url: "../../static/json/my-team.json",
         // url: "http://xug98.cn/course/" + Cookies.get("course") + "/myTeam",
         dataType: "json",
         contentType: "application/json;",
-        success: function(data, textStatus, xhr) {
+        success: function(team, textStatus, xhr) {
             if (xhr.status === 200) {
                 // alert("获取成功");
-                console.log("team success");
                 let content=document.getElementById("content");
+                let myTeam=Cookies.set("team",team.id);
+                console.log("my success");
 
                 let str="";
                 let status="valid";
                 //获取外围容器
-                    console.log(data);
-
-                    if(data.status==0) status="invalid";
+                    console.log(team);
+                    if(team.status==0) status="invalid";
                     let innerStr="";
                     innerStr += '\n' +
                         '                          <tr>\n' +
-                        '                            <td class="text-nowrap">' + data.leader.studentName + '</td>\n' +
-                        '                            <td>' + data.leader.account + '</td>\n' +
+                        '                            <td class="text-nowrap">' + team.leader.studentName + '</td>\n' +
+                        '                            <td>' + team.leader.account + '</td>\n' +
                         '                            <td>组长</td>\n' +
                         '                          </tr>';
-
-                    $.each(data.members, function (i, item) {
+                    let myId=Cookies.get("id");
+                    $.each(team.members, function (i, item) {
                         // console.log(item);
                         innerStr += '\n' +
                             '                          <tr>\n' +
@@ -262,23 +263,36 @@ function getMyTeam() {
                             '                            <td>组员</td>\n' +
                             '                          </tr>';
                     });
+                if(team.leader.id==myId)
+                {
                     str+='              <div class="col-lg-4">\n' +
                         '                <div class="card card-collapsed">\n' +
                         '                  <div class="card-header">\n' +
                         '                    <div class="d-flex align-items-center">\n' +
-                        '                      <span class="stamp stamp-md bg-blue ml-1 mr-4">'+data.klassSerial+'-'+data.teamSerial+'</span>\n' +
+                        '                      <span class="stamp stamp-md bg-blue ml-1 mr-4">'+team.klassSerial+'-'+team.teamSerial+'</span>\n' +
                         '                      <div>\n' +
-                        '                        <h4 class="m-0"><small>'+data.teamName+'</small></h4>\n' +
+                        '                        <h4 class="m-0"><small>'+team.name+'</small></h4>\n' +
                         '                        <small class="text-danger">'+status+'</small>\n' +
                         '                      </div>\n' +
                         '                    </div>\n' +
                         '                    <div class="card-options">\n' +
-                        '                      <a\n' +
-                        '                        class="card-options-collapse"\n' +
-                        '                        data-toggle="card-collapse"\n' +
-                        '                        href="#"\n' +
-                        '                        ><i class="fe fe-chevron-up mr-1"></i\n' +
-                        '                      ></a>\n' +
+                        '                <a\n' +
+                        '                            href="course-team-setting.html"\n' +
+                        '                            class="card-options-delete"\n' +
+                        '                            ><i class="fe fe-settings"></i\n' +
+                        '                          ></a>\n' +
+                        '                          <a\n' +
+                        '                            href="course-team-setting.html"\n' +
+                        '                            class="card-options-delete"\n' +
+                        '                            onclick="deleteTeam('+team.id+')"\n' +
+                        '                            ><i class="fe fe-trash"></i\n' +
+                        '                          ></a>\n' +
+                        '                          <a\n' +
+                        '                            class="card-options-collapse"\n' +
+                        '                            data-toggle="card-collapse"\n' +
+                        '                            href="#"\n' +
+                        '                            ><i class="fe fe-chevron-up mr-1"></i\n' +
+                        '                          ></a>'+
                         '                    </div>\n' +
                         '                  </div>\n' +
                         '                  <div class="card-body p-0">\n' +
@@ -294,9 +308,45 @@ function getMyTeam() {
                         '                  </div>\n' +
                         '                </div>\n' +
                         '              </div>\n';
-                content.innerHTML=str;
+                }
+
+               else
+                    str+='              <div class="col-lg-4">\n' +
+                        '                <div class="card card-collapsed">\n' +
+                        '                  <div class="card-header">\n' +
+                        '                    <div class="d-flex align-items-center">\n' +
+                        '                      <span class="stamp stamp-md bg-blue ml-1 mr-4">'+team.klassSerial+'-'+team.teamSerial+'</span>\n' +
+                        '                      <div>\n' +
+                        '                        <h4 class="m-0"><small>'+team.name+'</small></h4>\n' +
+                        '                        <small class="text-danger">'+status+'</small>\n' +
+                        '                      </div>\n' +
+                        '                    </div>\n' +
+                        '                    <div class="card-options">\n' +
+                        '                          <a\n' +
+                        '                            class="card-options-collapse"\n' +
+                        '                            data-toggle="card-collapse"\n' +
+                        '                            href="#"\n' +
+                        '                            ><i class="fe fe-chevron-up mr-1"></i\n' +
+                        '                          ></a>'+
+                        '                    </div>\n' +
+                        '                  </div>\n' +
+                        '                  <div class="card-body p-0">\n' +
+                        '                    <div class="table-responsive">\n' +
+                        '                      <table\n' +
+                        '                        class="table card-table table-striped table-vcenter"\n' +
+                        '                      >\n' +
+                        '                        <tbody>\n' +
+                        innerStr +
+                        '                        </tbody>\n' +
+                        '                      </table>\n' +
+                        '                    </div>\n' +
+                        '                  </div>\n' +
+                        '                </div>\n' +
+                        '              </div>\n';
+                content.innerHTML+=str;
 
             }
+
         },
         statusCode: {
             400: function() {
@@ -312,6 +362,132 @@ function getMyTeam() {
         }
     });
 }
+function getMyTeamForSetting() {
+    $.ajax({
+        type: "get",
+        async : false,
+        url: "../../static/json/my-team.json",
+        // url: "http://xug98.cn/course/" + Cookies.get("course") + "/myTeam",
+
+        dataType: "json",
+        contentType: "application/json;",
+        success: function(team, textStatus, xhr) {
+            if (xhr.status === 200) {
+                // alert("获取成功");
+                let content=document.getElementById("content");
+                console.log("my success");
+
+                let str="";
+                let status="valid";
+                //获取外围容器
+                console.log(team);
+                if(team.status==0) status="invalid";
+                let innerStr="";
+                innerStr += '\n' +
+                    '                          <tr>\n' +
+                    '                            <td class="text-nowrap">' + team.leader.studentName + '</td>\n' +
+                    '                            <td>' + team.leader.account + '</td>\n' +
+                    '                            <td>组长</td>\n' +
+                    '                          </tr>';
+
+                $.each(team.members, function (i, item) {
+                    // console.log(item);
+                    innerStr += '\n' +
+                        '                          <tr>\n' +
+                        '                            <td class="text-nowrap">' + item.studentName + '</td>\n' +
+                        '                            <td>' + item.account + '</td>\n' +
+                        '                            <td>组员</td>\n' +
+                        '  <td>\n' +
+                        '                          <a\n' +
+                        '                            href="course-team-setting.html"\n' +
+                        '                            class="card-options-delete"\n' +
+                        '                            onclick="deleteTeamMember('+team.id+','+item.id+')"\n' +
+                        '                            ><i class="fe fe-trash"></i\n' +
+                        '                          ></a>\n' +
+                        '                                      </td>'+
+                        '                          </tr>'+
+                    '';
+                });
+
+                content.innerHTML+=innerStr;
+
+            }
+
+        },
+        statusCode: {
+            400: function() {
+                alert("Team");
+
+                alert("错误的ID格式");
+            },
+            404: function() {
+                alert("Team");
+
+                alert("未找到课程");
+            }
+        }
+    });
+}
+function getNoTeamForSetting() {
+    $.ajax({
+        type: "get",
+        url: "http://xug98.cn/course/" + Cookies.get("course") + "/noTeam",
+        dataType: "json",
+        async : false,
+
+        contentType: "application/json;",
+        success: function(data, textStatus, xhr) {
+            if (xhr.status === 200) {
+                // alert("获取成功");
+                var content=document.getElementById("content-no");   //获取外围容器
+                var str="";
+                $.each(data, function(i, item) {
+                    console.log(item);
+                    str +='                                  <tr>\n' +
+                        '                                    <td>\n' +
+                        '                                      <label\n' +
+                        '                                        class="custom-control custom-checkbox"\n' +
+                        '                                      >\n' +
+                        '                                        <input\n' +
+                        '                                          type="checkbox"\n' +
+                        '                                          class="custom-control-input"\n' +
+                        '                                          name="example-checkbox1"\n' +
+                        '                                              value="'+item.id+'"\n' +
+                        '                                          checked=""\n' +
+                        '                                        />\n' +
+                        '                                        <span\n' +
+                        '                                          class="custom-control-label"\n' +
+                        '                                        ></span>\n' +
+                        '                                      </label>\n' +
+                        '                                    </td>\n' +
+
+                        '                                    <td class="text-nowrap">'+item.name+'</td>\n' +
+                        '                                    <td>'+item.account+'</td>\n' +
+                        '                                    <td>\n' +
+                        '                                      <span\n' +
+                        '                                        class="status-icon bg-orange"\n' +
+                        '                                      ></span>\n' +
+                        '                                      未组队' +
+                        '                                    </td>\n' +
+                        '                                  </tr>\n';
+
+                })
+                content.innerHTML=str;
+            }
+        },
+        statusCode: {
+            400: function() {
+                alert("NoTeam");
+                alert("错误的ID格式");
+            },
+            404: function() {
+                alert("NoTeam");
+                alert("未找到课程");
+            }
+        }
+    });
+}
+
 function requestTeamValid(){
     $.ajax({
         type: "post",
@@ -407,6 +583,23 @@ function createTeam() {
     });
 }
 function addTeamMembers() {
+    let addData="";
+    let conflictdata="[";
+
+    let childCheckBoxes1 = $("tbody.check1 tr td label input[type='checkbox']");
+    let childValue1 = $("tbody.check1 tr td input[type='text']");
+    let values = "";
+    let i;
+    for (i = 0; i < childCheckBoxes1.length; i++) {
+        if (childCheckBoxes1[i].checked == true) {
+            if (conflictdata !== "[") conflictdata += ',';
+            conflictdata += '{ "id":' + childCheckBoxes1[i].value + '}';
+        }
+
+    }
+    conflictdata += ']';
+    addData="{memebers:"+conflictdata+"}";
+    console.log(addData);
     let member = [
         {
             id: 20420162201582
@@ -459,6 +652,8 @@ function getNoTeam() {
         type: "get",
         url: "http://xug98.cn/course/" + Cookies.get("course") + "/noTeam",
         dataType: "json",
+        async : false,
+
         contentType: "application/json;",
         success: function(data, textStatus, xhr) {
             if (xhr.status === 200) {
@@ -489,14 +684,13 @@ function getNoTeam() {
         }
     });
 }
-function deleteTeamMember() {
-    let cid = "2";
+function deleteTeamMember(teamId,id) {
     let ata = {
-        id: "24320162202888",
+        id: id
     };
     $.ajax({
         type: "delete",
-        url: "http://xug98.cn/team/" + cid + "/remove",
+        url: "http://xug98.cn/team/" + teamId + "/remove",
         dataType: "json",
         data: JSON.stringify(ata),
 
@@ -522,6 +716,37 @@ function deleteTeamMember() {
             }
         }
     });
+}
+function deleteTeam(teamId) {
+    var result = confirm("确定删除学生?");
+    if (result) {
+        $.ajax({
+            type: "delete",
+            url: "http://xug98.cn/team/" + teamId,
+            dataType: "json",
+            contentType: "application/json;",
+            error: function (data, textStatus, xhr) {
+                console.log(cid);
+                alert("wrong");
+            },
+            success: function (data, textStatus, xhr) {
+                alert("成功");
+                console.log(data);
+            },
+
+            statusCode: {
+                400: function () {
+                    alert("错误的ID格式");
+                },
+                403: function () {
+                    alert("用户权限不足");
+                },
+                404: function () {
+                    alert("未找到课程");
+                }
+            }
+        });
+    }
 }
 
 //课程主页

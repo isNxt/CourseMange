@@ -506,35 +506,38 @@ function getAllCourse() {
     });
 }
 function deleteCourse() {
-    let courseId=Cookies.get("course");
-    $.ajax({
-        type: "delete",
-        url: "http://xug98.cn/course/" + courseId,
-        dataType: "json",
-        contentType: "application/json;",
-        error: function(data, textStatus, xhr) {
-            console.log(cid);
-            alert("wrong");
-        },
-        success: function(data, textStatus, xhr) {
-            alert("成功");
-            console.log(data);
-        },
+    var result = confirm("确定删除学生?");
+    if (result) {
+        let courseId = Cookies.get("course");
+        $.ajax({
+            type: "delete",
+            url: "http://xug98.cn/course/" + courseId,
+            dataType: "json",
+            contentType: "application/json;",
+            error: function (data, textStatus, xhr) {
+                console.log(cid);
+                alert("wrong");
+            },
+            success: function (data, textStatus, xhr) {
+                alert("成功");
+                console.log(data);
+            },
 
-        statusCode: {
-            400: function() {
-                alert("错误的ID格式");
-            },
-            403: function() {
-                alert("用户权限不足");
-            },
-            404: function() {
-                alert("未找到课程");
+            statusCode: {
+                400: function () {
+                    alert("错误的ID格式");
+                },
+                403: function () {
+                    alert("用户权限不足");
+                },
+                404: function () {
+                    alert("未找到课程");
+                }
             }
-        }
-    });
+        });
 
         window.location.href("./course-home.html");
+    }
 
 }
 
@@ -627,38 +630,41 @@ function getClassItems() {
 }
     //删除班级
 function deleteClass(classId) {
-    $.ajax({
-        type: "delete",
-        url: "http://xug98.cn/class/" + classId,
-        dataType: "json",
-        contentType: "application/json;",
-        error: function(data, textStatus, xhr) {
-            console.log(cid);
-            alert("wrong");
-        },
-        success: function(data, textStatus, xhr) {
-            alert("成功");
-            if (xhr.status === 204) {
+    var result = confirm("确定删除学生?");
+    if (result) {
+        $.ajax({
+            type: "delete",
+            url: "http://xug98.cn/class/" + classId,
+            dataType: "json",
+            contentType: "application/json;",
+            error: function (data, textStatus, xhr) {
+                console.log(cid);
+                alert("wrong");
+            },
+            success: function (data, textStatus, xhr) {
                 alert("成功");
-                console.log(data);
+                if (xhr.status === 204) {
+                    alert("成功");
+                    console.log(data);
+                }
+            },
+            statusCode: {
+                400: function () {
+                    alert("错误的ID格式");
+                },
+                403: function () {
+                    alert("用户权限不足");
+                },
+                404: function () {
+                    alert("未找到课程");
+                },
+                200: function () {
+                    alert("成功");
+                }
             }
-        },
-        statusCode: {
-            400: function() {
-                alert("错误的ID格式");
-            },
-            403: function() {
-                alert("用户权限不足");
-            },
-            404: function() {
-                alert("未找到课程");
-            },
-            200: function(){
-                alert("成功");
-            }
-        }
-    });
-    window.location.reload();
+        });
+        window.location.reload();
+    }
 }
     //创建班级 -为跳转
 function createClass() {
@@ -892,7 +898,7 @@ function getClassList(seminarId) {
                         '                                  </a>\n' +
                         '                                </td>\n' +
                         '                              </tr>';
-                    content.innerHTML=str;
+                    content.innerHTML+=str;
 
                 });
 
