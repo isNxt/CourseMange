@@ -546,7 +546,7 @@ function deleteCourse() {
 function getClassItems() {
     $.ajax({
         type: "get",
-        url: "http://xug98.cn/course/" + Cookies.get("course") + "http://xug98.cn/class",
+        url: "http://xug98.cn/course/" + Cookies.get("course")",
         dataType: "json",
         contentType: "application/json;",
         success: function(data, textStatus, xhr) {
@@ -1664,7 +1664,6 @@ function getTeam() {
     $.ajax({
         type: "get",
         async : false,
-
         url: "http://xug98.cn/course/" + Cookies.get("course") + "http://xug98.cn/team",
         dataType: "json",
         contentType: "application/json;",
@@ -1732,7 +1731,6 @@ function getTeam() {
                         '              </div>\n';
                 });
                 content.innerHTML=str;
-
             }
         },
         statusCode: {

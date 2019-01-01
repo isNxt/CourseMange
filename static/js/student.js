@@ -71,8 +71,7 @@ function getUserInfo() {
 }
 //修改密码
 function editPassword() {
-    // let ata = {password: $("#password").val()};
-    let ata = "222";
+    let ata = {password: $("#password").val()};
     console.log(ata);
     $.ajax({
         type: "put",
@@ -487,8 +486,10 @@ function getNoTeamForSetting() {
         }
     });
 }
-
 function requestTeamValid(){
+let ata = {
+    reason: $("#textarea-input").val(),
+};
     $.ajax({
         type: "post",
         url: "http://xug98.cn/team/"+Cookies.get("team")+"/teamvalidrequest",
@@ -518,22 +519,23 @@ function requestTeamValid(){
 
 }
 function createTeam() {
-    let members = [
-        {
-            id: 115,
-        },
-        {
-            id: 127,
+    let addData="";
+    let conflictdata="[";
 
-        },
-        {
-            id:134,
-
-        },
-        {
-            id: 145
+    let childCheckBoxes1 = $("tbody.check1 tr td label input[type='checkbox']");
+    let childValue1 = $("tbody.check1 tr td input[type='text']");
+    let values = "";
+    let i;
+    for (i = 0; i < childCheckBoxes1.length; i++) {
+        if (childCheckBoxes1[i].checked == true) {
+            if (conflictdata !== "[") conflictdata += ',';
+            conflictdata += '{ id:' + childCheckBoxes1[i].value + '}';
         }
-    ];
+
+    }
+    conflictdata += ']';
+    addData="{memebers:"+conflictdata+"}";
+    console.log(addData);
     let myId=Cookies.get("id");
     let myCourse=Cookies.get("course");
     let leader = [
@@ -551,7 +553,7 @@ function createTeam() {
             id: 1
         },
         leader: leader,
-        members: members
+        members: addData
     };
     console.log(ata);
     $.ajax({
@@ -582,6 +584,39 @@ function createTeam() {
         }
     });
 }
+function getAllClassForCreate() {
+    $.ajax({
+        type: "get",
+        url: "http://xug98.cn/course/" + Cookies.get("course"),
+        dataType: "json",
+        contentType: "application/json;",
+        success: function(data, textStatus, xhr) {
+            if (xhr.status === 200) {
+                // alert("获取成功");
+                console.log("classlist");
+                let content=document.getElementById("select-content");   //获取外围容器
+                let str="";
+
+                $.each(data, function(i, item) {
+                    console.log(item);
+                    str+='<option value="'+item.id+'">'+item.klassSerial+'班</option>';
+
+                });
+                content.innerHTML=str;
+
+            }
+        },
+        statusCode: {
+            400: function() {
+                alert("错误的ID格式");
+            },
+            404: function() {
+                alert("未找到课程");
+            }
+        }
+    });
+}
+
 function addTeamMembers() {
     let addData="";
     let conflictdata="[";
@@ -593,39 +628,20 @@ function addTeamMembers() {
     for (i = 0; i < childCheckBoxes1.length; i++) {
         if (childCheckBoxes1[i].checked == true) {
             if (conflictdata !== "[") conflictdata += ',';
-            conflictdata += '{ "id":' + childCheckBoxes1[i].value + '}';
+            conflictdata += '{ id:' + childCheckBoxes1[i].value + '}';
         }
 
     }
     conflictdata += ']';
     addData="{memebers:"+conflictdata+"}";
     console.log(addData);
-    let member = [
-        {
-            id: 20420162201582
-        },
-        {
-            id: 20420162201666
-        }
-    ];
-    let ata = {
-        id: 1,
-        name: "1-2 Intellij",
-        course: {
-            id: 1
-        },
-        class: {
-            id: 1
-        },
-        members: member,
-        valid: true
-    };
-    console.log(ata);
+
+
     $.ajax({
         type: "put",
         url: "http://xug98.cn/team/" + Cookies.get("team"),
         dataType: "json",
-        data: JSON.stringify(ata),
+        data: JSON.stringify(addData),
         contentType: "application/json",
         success: function(data, textStatus, xhr) {
             console.log(data);
@@ -638,8 +654,10 @@ function addTeamMembers() {
         },
         statusCode: {
             400: function() {
-                $("#password").val("");
-                alert("用户名或密码错误！");
+                var result = confirm("无法添加成员,确认发起特殊申请?");
+                if (result) {
+                   windwos.location.herf="./course-team-request.html";
+                }
             }
         }
     });
@@ -735,14 +753,11 @@ function deleteTeam(teamId) {
             },
 
             statusCode: {
-                400: function () {
-                    alert("错误的ID格式");
-                },
-                403: function () {
-                    alert("用户权限不足");
-                },
-                404: function () {
-                    alert("未找到课程");
+                400: function() {
+                    var result = confirm("无法删除成员,确认发起特殊申请?");
+                    if (result) {
+                        windwos.location.herf="./course-team-request.html";
+                    }
                 }
             }
         });

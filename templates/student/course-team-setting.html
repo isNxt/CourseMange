@@ -45,14 +45,9 @@
     <link href="../../static/css/tabler.css" rel="stylesheet" />
     <!-- c3.js Charts Plugin -->
     <link href="../../static/plugins/charts-c3/plugin.css" rel="stylesheet" />
-    <!-- gijgo datepicker Plugin -->
-    <link
-      href="../../static/plugins/gijgo/css/gijgo.min.css"
-      rel="stylesheet"
-    />
+
     <script src="../../static/plugins/gijgo/js/gijgo.min.js"></script>
-    <!-- fab Plugin -->
-    <link href="../../static/plugins/fab/fab.css" rel="stylesheet" />
+
     <!-- Customize -->
     <link href="../../static/css/style.css" rel="stylesheet" />
     <script src="../../static/js/jwt.js"></script>
@@ -439,5 +434,21 @@
         </div>
       </div>
     </footer>
+
+
   </body>
+<script>
+  // 修改弹出框的title, 显示弹框
+  function ShowCreateModal(title){
+    $("#createFileTitle").text(title);
+    $('#createFileMModal').modal('show');
+  }
+  // 关闭弹框， 获取输入值，然后执行逻辑
+  $("#createFileSureBut").click(function (){
+    $("#createFileMModal").modal("hide");
+    var inputFileName = $("#fileName").val();
+    console.log("input file name : " + inputFileName);
+  });
+
+</script>
 </html>
