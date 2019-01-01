@@ -678,7 +678,7 @@ function createClass() {
     alert(Cookies.get("course"));
     $.ajax({
         type: "post",
-        url: "http://xug98.cn/course/" + Cookies.get("course") + "http://xug98.cn/class",
+        url: "http://xug98.cn/course/" + Cookies.get("course") ,
         dataType: "json",
         data: JSON.stringify(ata),
         contentType: "application/json",
@@ -872,7 +872,7 @@ function getSeminarList(roundId) {
 function getClassList(seminarId) {
     $.ajax({
         type: "get",
-        url: "http://xug98.cn/course/" + Cookies.get("course") + "http://xug98.cn/class",
+        url: "http://xug98.cn/course/" + Cookies.get("course") ,
         dataType: "json",
         contentType: "application/json;",
         success: function(data, textStatus, xhr) {

@@ -71,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/static/js/teacher.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="416">
-              <caret line="548" column="63" selection-start-line="548" selection-start-column="63" selection-end-line="548" selection-end-column="63" />
+              <caret line="548" column="63" lean-forward="true" selection-start-line="548" selection-start-column="63" selection-end-line="548" selection-end-column="63" />
               <folding>
                 <element signature="e#53#92#0" />
                 <element signature="e#124#161#0" />
@@ -1912,7 +1912,7 @@
     <entry file="file://$PROJECT_DIR$/static/js/teacher.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
-          <caret line="548" column="63" selection-start-line="548" selection-start-column="63" selection-end-line="548" selection-end-column="63" />
+          <caret line="548" column="63" lean-forward="true" selection-start-line="548" selection-start-column="63" selection-end-line="548" selection-end-column="63" />
           <folding>
             <element signature="e#53#92#0" />
             <element signature="e#124#161#0" />
