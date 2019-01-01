@@ -56,14 +56,13 @@
     <!-- Customize -->
     <link href="../../static/css/style.css" rel="stylesheet" />
     <script src="../../static/js/jwt.js"></script>
-    <script src="../../static/js/control.js"></script>
+
+    <script src="../../static/js/fast-json.js"></script>
     <script src="../../static/js/convert.js"></script>
     <script src="../../static/js/user.js"></script>
     <script src="../../static/js/teacher.js"></script>
-    <script src="../../static/js/user.js"></script>
-    <script src="../../static/js/teacher.js"></script>
   </head>
-  <body onload="getReportByClass()">
+  <body onload="getAttendanceItemsByClass()">
     <div class="page">
       <div class="page-main">
         <div class="header py-4">
@@ -201,13 +200,12 @@
                           <th></th>
                           <th>报告</th>
                           <th>状态</th>
-                          <th>打分</th>
                           <th></th>
                           <th></th>
                         </tr>
                       </thead>
-                      <tbody>
-                       <!-- <tr>
+                      <tbody id="content">
+                        <tr>
                           <td><span class="text-muted">1-1</span></td>
                           <td><a href="." class="text-inherit">1.pdf</a></td>
                           <td>
@@ -240,7 +238,7 @@
                               <i class="fe fe-download"></i>
                             </a>
                           </td>
-                        </tr>-->
+                        </tr>
                       </tbody>
                     </table>
                   </div>

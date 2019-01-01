@@ -56,14 +56,13 @@
     <!-- Customize -->
     <link href="../../static/css/style.css" rel="stylesheet" />
     <script src="../../static/js/jwt.js"></script>
-    <script src="../../static/js/control.js"></script>
+
+    <script src="../../static/js/fast-json.js"></script>
     <script src="../../static/js/convert.js"></script>
     <script src="../../static/js/user.js"></script>
     <script src="../../static/js/student.js"></script>
-    <script src="../../static/js/user.js"></script>
-    <script src="../../static/js/student.js"></script>
   </head>
-  <body onload="initCourseGroup()">
+  <body onload="getMyTeam();getTeam();getNoTeam()">
     <div class="page">
       <div class="page-main">
         <div class="header py-4">
@@ -168,7 +167,7 @@
             </nav>
             <div class="row">
               <div class="col-lg-8">
-                <div class="row">
+                <div class="row" id="content">
                   <div class="col-lg-6">
                     <div class="card">
                       <div class="card-header">
@@ -405,7 +404,7 @@
                       <table
                         class="table card-table table-striped table-vcenter"
                       >
-                        <tbody>
+                        <tbody id="content-no">
                           <tr>
                             <td class="w-1"><span class="avatar">L</span></td>
                             <td class="text-nowrap">林晓明</td>

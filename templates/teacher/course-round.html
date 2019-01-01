@@ -56,10 +56,9 @@
     <!-- Customize -->
     <link href="../../static/css/style.css" rel="stylesheet" />
     <script src="../../static/js/jwt.js"></script>
-    <script src="../../static/js/control.js"></script>
+
+    <script src="../../static/js/fast-json.js"></script>
     <script src="../../static/js/convert.js"></script>
-    <script src="../../static/js/user.js"></script>
-    <script src="../../static/js/teacher.js"></script>
     <script src="../../static/js/user.js"></script>
     <script src="../../static/js/teacher.js"></script>
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
@@ -279,7 +278,7 @@
                 tooltip="新建讨论课"
               ></a>
               <a
-                href="./course-round-create.html"
+                onclick="createRound()"
                 class="buttons"
                 style="background-image:url(../../static/images/box.svg)"
                 tooltip="新建轮次"
