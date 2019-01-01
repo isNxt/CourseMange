@@ -150,13 +150,13 @@ function getTeam() {
                 // alert("获取成功");
                 console.log("team success");
                 let content=document.getElementById("content");
-
+                let myTeam=Cookies.get("team");
                 let str="";
                 let status="valid";
                 //获取外围容器
                 $.each(data, function(i, team) {
                     console.log(team);
-
+                    if(team.id==myTeam) return;
                     if(team.status==0) status="invalid";
                     let innerStr="";
                     innerStr += '\n' +
