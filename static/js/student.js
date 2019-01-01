@@ -544,13 +544,12 @@ function createTeam() {
         }
     ];
     let ata = {
-        id: 1,
-        name: "1-2 Intellij",
+        name: $("#name").val(),
         course: {
             id: myCourse
         },
         class: {
-            id: 1
+            id: $("#select-content").val()
         },
         leader: leader,
         members: addData

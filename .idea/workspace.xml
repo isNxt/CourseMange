@@ -32,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/student.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="227" column="16" selection-start-line="227" selection-start-column="16" selection-end-line="227" selection-end-column="16" />
+            <state relative-caret-position="508">
+              <caret line="558" column="21" lean-forward="true" selection-start-line="558" selection-start-column="21" selection-end-line="558" selection-end-column="21" />
               <folding>
                 <element signature="n#!!block;n#jumpFromCourseHome#0" />
                 <element signature="n#!!block;n#jumpFromRound#0" />
@@ -53,9 +53,6 @@
                 <element signature="n#!!block;n#getMyTeam#0" />
                 <element signature="n#!!block;n#getMyTeam#1" />
                 <element signature="n#!!block;n#getNoTeam#0" />
-                <element signature="n#!!block;n#requestTeamValid#0" />
-                <element signature="n#!!block;n#createTeam#0" />
-                <element signature="n#!!block;n#getClassItems#0" />
                 <element signature="e#28636#28802#0" />
                 <element signature="e#28666#28715#0" />
                 <element signature="e#28745#28792#0" />
@@ -72,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/teacher.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
@@ -566,8 +563,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/student/course-team-create.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="193" column="61" lean-forward="true" selection-start-line="193" selection-start-column="32" selection-end-line="193" selection-end-column="61" />
+            <state relative-caret-position="375">
+              <caret line="192" column="70" selection-start-line="192" selection-start-column="70" selection-end-line="192" selection-end-column="70" />
               <folding>
                 <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
@@ -697,9 +694,9 @@
         <option value="$PROJECT_DIR$/templates/student/course-team-request.html" />
         <option value="$PROJECT_DIR$/templates/student/course-team-setting.html" />
         <option value="$PROJECT_DIR$/templates/student/seminar-round-detail.html" />
+        <option value="$PROJECT_DIR$/static/js/teacher.js" />
         <option value="$PROJECT_DIR$/templates/student/course-team-create.html" />
         <option value="$PROJECT_DIR$/static/js/student.js" />
-        <option value="$PROJECT_DIR$/static/js/teacher.js" />
       </list>
     </option>
   </component>
@@ -1844,72 +1841,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/teacher/course-create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-772">
-          <caret line="281" column="64" lean-forward="true" selection-start-line="281" selection-start-column="64" selection-end-line="281" selection-end-column="64" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/student/course-team-setting.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2707">
           <caret line="70" column="18" lean-forward="true" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/student/course-team-create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="193" column="61" lean-forward="true" selection-start-line="193" selection-start-column="32" selection-end-line="193" selection-end-column="61" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/student.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="227" column="16" selection-start-line="227" selection-start-column="16" selection-end-line="227" selection-end-column="16" />
-          <folding>
-            <element signature="n#!!block;n#jumpFromCourseHome#0" />
-            <element signature="n#!!block;n#jumpFromRound#0" />
-            <element signature="n#!!block;n#jumpFromRoundClass#0" />
-            <element signature="n#!!block;n#activeStudent#0" />
-            <element signature="n#!!block;n#initHome#0" />
-            <element signature="n#!!block;n#getUserInfo#0" />
-            <element signature="e#1459#1722#0" />
-            <element signature="e#1558#1712#0" />
-            <element signature="n#!!block;n#editPassword#0" />
-            <element signature="n#!!block;n#editEmail#0" />
-            <element signature="n#!!block;n#getTeam#0" />
-            <element signature="e#4713#5235#0" />
-            <element signature="n#!!block;n#getMyTeam#0" />
-            <element signature="n#!!block;n#getMyTeam#1" />
-            <element signature="n#!!block;n#getNoTeam#0" />
-            <element signature="n#!!block;n#requestTeamValid#0" />
-            <element signature="n#!!block;n#createTeam#0" />
-            <element signature="n#!!block;n#getClassItems#0" />
-            <element signature="e#28636#28802#0" />
-            <element signature="e#28666#28715#0" />
-            <element signature="e#28745#28792#0" />
-            <element signature="n#!!block;n#addTeamMembers#0" />
-            <element signature="n#!!block;n#getNoTeam#0" />
-            <element signature="n#!!block;n#deleteTeamMember#0" />
-            <element signature="n#!!block;n#deleteTeam#0" />
-            <element signature="n#!!block;n#getCourseList#0" />
-            <element signature="e#13888#17544#0" />
-            <element signature="n#!!block;n#getAttendanceByClass#0" />
-            <element signature="n#!!block;n#getCurrentSeminar#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2350,6 +2285,65 @@
             <element signature="e#127752#128014#0" />
             <element signature="e#127782#127878#0" />
             <element signature="e#127908#128004#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/teacher/course-create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-772">
+          <caret line="281" column="64" lean-forward="true" selection-start-line="281" selection-start-column="64" selection-end-line="281" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/student/course-team-create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="192" column="70" selection-start-line="192" selection-start-column="70" selection-end-line="192" selection-end-column="70" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/student.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="558" column="21" lean-forward="true" selection-start-line="558" selection-start-column="21" selection-end-line="558" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!block;n#jumpFromCourseHome#0" />
+            <element signature="n#!!block;n#jumpFromRound#0" />
+            <element signature="n#!!block;n#jumpFromRoundClass#0" />
+            <element signature="n#!!block;n#activeStudent#0" />
+            <element signature="n#!!block;n#initHome#0" />
+            <element signature="n#!!block;n#getUserInfo#0" />
+            <element signature="e#1459#1722#0" />
+            <element signature="e#1558#1712#0" />
+            <element signature="n#!!block;n#editPassword#0" />
+            <element signature="n#!!block;n#editEmail#0" />
+            <element signature="n#!!block;n#getTeam#0" />
+            <element signature="e#4713#5235#0" />
+            <element signature="n#!!block;n#getMyTeam#0" />
+            <element signature="n#!!block;n#getMyTeam#1" />
+            <element signature="n#!!block;n#getNoTeam#0" />
+            <element signature="e#28636#28802#0" />
+            <element signature="e#28666#28715#0" />
+            <element signature="e#28745#28792#0" />
+            <element signature="n#!!block;n#addTeamMembers#0" />
+            <element signature="n#!!block;n#getNoTeam#0" />
+            <element signature="n#!!block;n#deleteTeamMember#0" />
+            <element signature="n#!!block;n#deleteTeam#0" />
+            <element signature="n#!!block;n#getCourseList#0" />
+            <element signature="e#13888#17544#0" />
+            <element signature="n#!!block;n#getAttendanceByClass#0" />
+            <element signature="n#!!block;n#getCurrentSeminar#0" />
           </folding>
         </state>
       </provider>
