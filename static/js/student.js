@@ -208,7 +208,7 @@ function getTeam() {
                         '                </div>\n' +
                         '              </div>\n';
                 });
-                content.innerHTML=str;
+                content.innerHTML+=str;
 
             }
         },
@@ -229,7 +229,8 @@ function getTeam() {
 function getMyTeam() {
     $.ajax({
         type: "get",
-        url: "http://xug98.cn/course/" + Cookies.get("course") + "/myTeam",
+        url: "../../static/json/my-team.json",
+        // url: "http://xug98.cn/course/" + Cookies.get("course") + "/myTeam",
         dataType: "json",
         contentType: "application/json;",
         success: function(data, textStatus, xhr) {

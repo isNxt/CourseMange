@@ -102,7 +102,7 @@ function getUserInfo() {
 }
     //修改密码
 function editPassword() {
-    // let ata = {password: $("#password").val()};
+    let ata = {password: $("#password").val()};
     let ata = "222";
     console.log(ata);
     $.ajax({
@@ -134,12 +134,9 @@ function editPassword() {
 }
     //修改邮箱
 function editEmail() {
-    /*
       let ata = {
           email: $("#email").val()
       };
-  */
-    let ata = "333@qq.com";
     console.log(ata);
     $.ajax({
         type: "put",
