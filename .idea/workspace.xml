@@ -35,15 +35,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/student.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="589" column="62" lean-forward="true" selection-start-line="589" selection-start-column="62" selection-end-line="589" selection-end-column="62" />
+            <state relative-caret-position="315">
+              <caret line="227" column="16" selection-start-line="227" selection-start-column="16" selection-end-line="227" selection-end-column="16" />
               <folding>
                 <element signature="n#!!block;n#jumpFromCourseHome#0" />
                 <element signature="n#!!block;n#jumpFromRound#0" />
                 <element signature="n#!!block;n#jumpFromRoundClass#0" />
+                <element signature="n#!!block;n#activeStudent#0" />
                 <element signature="n#!!block;n#initHome#0" />
+                <element signature="n#!!block;n#getUserInfo#0" />
                 <element signature="e#1459#1722#0" />
                 <element signature="e#1558#1712#0" />
+                <element signature="n#!!block;n#editPassword#0" />
                 <element signature="n#!!block;n#editEmail#0" />
                 <element signature="n#!!block;n#getTeam#0" />
                 <element signature="e#4713#5235#0" />
@@ -52,9 +55,11 @@
                 <element signature="n#!!block;n#getNoTeam#0" />
                 <element signature="n#!!block;n#requestTeamValid#0" />
                 <element signature="n#!!block;n#createTeam#0" />
+                <element signature="n#!!block;n#getClassItems#0" />
                 <element signature="e#28636#28802#0" />
                 <element signature="e#28666#28715#0" />
                 <element signature="e#28745#28792#0" />
+                <element signature="n#!!block;n#addTeamMembers#0" />
                 <element signature="n#!!block;n#getNoTeam#0" />
                 <element signature="n#!!block;n#deleteTeamMember#0" />
                 <element signature="n#!!block;n#deleteTeam#0" />
@@ -70,8 +75,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/teacher.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="548" column="63" lean-forward="true" selection-start-line="548" selection-start-column="63" selection-end-line="548" selection-end-column="63" />
+            <state relative-caret-position="330">
+              <caret line="794" column="32" selection-start-line="794" selection-start-column="32" selection-end-line="794" selection-end-column="32" />
               <folding>
                 <element signature="e#53#92#0" />
                 <element signature="e#124#161#0" />
@@ -169,9 +174,7 @@
                 <element signature="e#28612#28668#0" />
                 <element signature="e#28703#28758#0" />
                 <element signature="e#28793#28845#0" />
-                <element signature="e#28953#30037#0" />
                 <element signature="e#28969#29130#0" />
-                <element signature="e#29199#30033#0" />
                 <element signature="e#29464#29592#0" />
                 <element signature="e#29624#29693#0" />
                 <element signature="e#29715#30027#0" />
@@ -181,8 +184,6 @@
                 <element signature="e#30239#30578#0" />
                 <element signature="e#30436#30472#0" />
                 <element signature="e#30503#30572#0" />
-                <element signature="e#30617#33382#0" />
-                <element signature="e#30697#33378#0" />
                 <element signature="e#30927#33110#0" />
                 <element signature="e#30965#33099#0" />
                 <element signature="e#30983#31000#0" />
@@ -190,18 +191,11 @@
                 <element signature="e#33132#33372#0" />
                 <element signature="e#33162#33248#0" />
                 <element signature="e#33278#33362#0" />
-                <element signature="e#33416#37538#0" />
-                <element signature="e#33455#37534#0" />
-                <element signature="e#33672#37140#0" />
                 <element signature="e#33690#33707#0" />
-                <element signature="e#33911#36874#0" />
-                <element signature="e#36963#37128#0" />
                 <element signature="e#37162#37528#0" />
                 <element signature="e#37196#37284#0" />
                 <element signature="e#37314#37402#0" />
                 <element signature="e#37432#37518#0" />
-                <element signature="e#37572#39559#0" />
-                <element signature="e#37585#39555#0" />
                 <element signature="e#37815#39361#0" />
                 <element signature="e#37853#39351#0" />
                 <element signature="e#37871#37888#0" />
@@ -623,6 +617,8 @@
       <find>i</find>
       <find>1</find>
       <find>&quot;/</find>
+      <find>+ &quot;http://xug98.cn/class&quot;,</find>
+      <find>+ &quot;http://xug98.cn</find>
     </findStrings>
     <replaceStrings>
       <replace>url: &quot;http://xugang.cn</replace>
@@ -642,6 +638,8 @@
       <replace>j</replace>
       <replace>2</replace>
       <replace>&quot;http://xug98.cn/</replace>
+      <replace>,</replace>
+      <replace>+ &quot;</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\Cici\Documents\GitHub\CourseMange</dir>
@@ -649,6 +647,7 @@
       <dir>D:\Cici\Documents\GitHub\CourseMange\templates\admin</dir>
       <dir>D:\Cici\Documents\GitHub\CourseMange\templates\student</dir>
       <dir>D:\Cici\Documents\GitHub\CourseMange\templates</dir>
+      <dir>D:\Cici\Documents\GitHub\CourseMange\static\js</dir>
     </dirStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -1878,15 +1877,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/student.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="589" column="62" lean-forward="true" selection-start-line="589" selection-start-column="62" selection-end-line="589" selection-end-column="62" />
+        <state relative-caret-position="315">
+          <caret line="227" column="16" selection-start-line="227" selection-start-column="16" selection-end-line="227" selection-end-column="16" />
           <folding>
             <element signature="n#!!block;n#jumpFromCourseHome#0" />
             <element signature="n#!!block;n#jumpFromRound#0" />
             <element signature="n#!!block;n#jumpFromRoundClass#0" />
+            <element signature="n#!!block;n#activeStudent#0" />
             <element signature="n#!!block;n#initHome#0" />
+            <element signature="n#!!block;n#getUserInfo#0" />
             <element signature="e#1459#1722#0" />
             <element signature="e#1558#1712#0" />
+            <element signature="n#!!block;n#editPassword#0" />
             <element signature="n#!!block;n#editEmail#0" />
             <element signature="n#!!block;n#getTeam#0" />
             <element signature="e#4713#5235#0" />
@@ -1895,9 +1897,11 @@
             <element signature="n#!!block;n#getNoTeam#0" />
             <element signature="n#!!block;n#requestTeamValid#0" />
             <element signature="n#!!block;n#createTeam#0" />
+            <element signature="n#!!block;n#getClassItems#0" />
             <element signature="e#28636#28802#0" />
             <element signature="e#28666#28715#0" />
             <element signature="e#28745#28792#0" />
+            <element signature="n#!!block;n#addTeamMembers#0" />
             <element signature="n#!!block;n#getNoTeam#0" />
             <element signature="n#!!block;n#deleteTeamMember#0" />
             <element signature="n#!!block;n#deleteTeam#0" />
@@ -1911,8 +1915,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/teacher.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="548" column="63" lean-forward="true" selection-start-line="548" selection-start-column="63" selection-end-line="548" selection-end-column="63" />
+        <state relative-caret-position="330">
+          <caret line="794" column="32" selection-start-line="794" selection-start-column="32" selection-end-line="794" selection-end-column="32" />
           <folding>
             <element signature="e#53#92#0" />
             <element signature="e#124#161#0" />
@@ -2010,9 +2014,7 @@
             <element signature="e#28612#28668#0" />
             <element signature="e#28703#28758#0" />
             <element signature="e#28793#28845#0" />
-            <element signature="e#28953#30037#0" />
             <element signature="e#28969#29130#0" />
-            <element signature="e#29199#30033#0" />
             <element signature="e#29464#29592#0" />
             <element signature="e#29624#29693#0" />
             <element signature="e#29715#30027#0" />
@@ -2022,8 +2024,6 @@
             <element signature="e#30239#30578#0" />
             <element signature="e#30436#30472#0" />
             <element signature="e#30503#30572#0" />
-            <element signature="e#30617#33382#0" />
-            <element signature="e#30697#33378#0" />
             <element signature="e#30927#33110#0" />
             <element signature="e#30965#33099#0" />
             <element signature="e#30983#31000#0" />
@@ -2031,18 +2031,11 @@
             <element signature="e#33132#33372#0" />
             <element signature="e#33162#33248#0" />
             <element signature="e#33278#33362#0" />
-            <element signature="e#33416#37538#0" />
-            <element signature="e#33455#37534#0" />
-            <element signature="e#33672#37140#0" />
             <element signature="e#33690#33707#0" />
-            <element signature="e#33911#36874#0" />
-            <element signature="e#36963#37128#0" />
             <element signature="e#37162#37528#0" />
             <element signature="e#37196#37284#0" />
             <element signature="e#37314#37402#0" />
             <element signature="e#37432#37518#0" />
-            <element signature="e#37572#39559#0" />
-            <element signature="e#37585#39555#0" />
             <element signature="e#37815#39361#0" />
             <element signature="e#37853#39351#0" />
             <element signature="e#37871#37888#0" />

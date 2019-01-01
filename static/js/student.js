@@ -587,7 +587,7 @@ function createTeam() {
 function getAllClassForCreate() {
     $.ajax({
         type: "get",
-        url: "http://xug98.cn/course/" + Cookies.get("course"),
+        url: "http://xug98.cn/course/" + Cookies.get("course") +"/class",
         dataType: "json",
         contentType: "application/json;",
         success: function(data, textStatus, xhr) {
@@ -616,7 +616,6 @@ function getAllClassForCreate() {
         }
     });
 }
-
 function addTeamMembers() {
     let addData="";
     let conflictdata="[";
