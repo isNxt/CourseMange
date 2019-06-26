@@ -1,4 +1,5 @@
 # course-manage
-## dependence
-- [tabler](https://github.com/tabler/tabler)
-- webstorm
+## info
+- 前后端分离
+- jquery ajax
+
