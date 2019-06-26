@@ -1,2 +1,4 @@
-# CourseMange
-FrontEnd for OOAD team project XMU Course Mange System
+# course-manage
+## dependence
+- [tabler](https://github.com/tabler/tabler)
+- webstorm
