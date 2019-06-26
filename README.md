@@ -1,9 +1,7 @@
 # course-manage
 ## info
 - 翻转课堂: 包括学生端和老师端
-- 前后端分离
-- jquery ajax
-- websocket
+- 前后端分离: jquery ajax; websocket
 ## func
 教师:
 - 增删改课程
