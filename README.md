@@ -1,7 +1,10 @@
 # course-manage
 ## info
-- 翻转课堂: 学生端 + 老师端
-- 前后端分离: jquery ajax + websocket + bootstrap
+- 响应式布局 翻转课堂 front-end
+- 3 webapp designed for differnet groups: 学生端 + 老师端 + 管理员端
+- support separation of front and rear
+- core dependency: jquery ajax + websocket + bootstrap
+
 ## func
 教师:
 - 增删改课程
